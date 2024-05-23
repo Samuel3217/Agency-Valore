@@ -1,21 +1,13 @@
-"use client";
-import React from "react";
-import { useRouter } from "next/navigation";
+
+import Barra from "@/app/bar"
 
 function Page() {
-  const router = useRouter();
 
-  const handleChangeImage = () => {
-    router.push("/");
-  };
+  
 
   return (
-    <div className="items-center justify-center ">
-      <img
-        src="/images/valore.png"
-        className="w-24 h-15"
-        onClick={handleChangeImage}
-      />
+    <div className="">
+      <Barra/>
       <h1 className="text-center text-5xl">Impresiones</h1>
 
       <div className="bg-gray-200 h-72 w-96 ml-[200px] mt-10">

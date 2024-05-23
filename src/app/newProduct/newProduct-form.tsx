@@ -13,8 +13,11 @@ import { Label } from "@/components/ui/label";
 import { nuevos } from "@prisma/client";
 import { CreateNewProduct, UdateNewProduct } from "../adminNuevos/new_actions"
 
+interface CardWithFormNewProps {
+  nuevos?: nuevos;
+}
 
-export function CardWithFormNewProduct({ nuevos }: { nuevos: nuevos }) {
+export function CardWithFormNewProduct({ nuevos }: CardWithFormNewProps) {
     
 
     const functionAction = nuevos?.id ? UdateNewProduct: CreateNewProduct

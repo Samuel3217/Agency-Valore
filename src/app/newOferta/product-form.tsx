@@ -21,7 +21,7 @@ export function CardWithFormOferta({ product }: CardWithFormOfertaProps ) {
     
 
   const functionAction = product?.id ? updateProduct: createProduct
-
+  
   return (
     <form action={functionAction}>
       <input type="hidden" name="id" value={product?.id} />

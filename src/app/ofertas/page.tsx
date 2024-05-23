@@ -7,7 +7,7 @@ export default function Page() {
     <div className="">
       
     <div className="flex-justify items-center">
-         <Barra textoAdicional=''/>
+         <Barra/>
     </div>
     <div>
         <h1

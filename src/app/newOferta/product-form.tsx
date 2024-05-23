@@ -13,7 +13,11 @@ import { Label } from "@/components/ui/label";
 import { product } from "@prisma/client";
 import { createProduct, updateProduct } from "../adminOfertas/product_action";
 
-export function CardWithFormOferta({ product }: { product: product }) {
+interface CardWithFormOfertaProps {
+  product?: product;
+}
+
+export function CardWithFormOferta({ product }: CardWithFormOfertaProps ) {
     
 
   const functionAction = product?.id ? updateProduct: createProduct

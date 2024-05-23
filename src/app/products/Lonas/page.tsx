@@ -1,6 +1,4 @@
-"use client";
-import React from "react";
-import { useRouter } from "next/navigation";
+
 import Barra from "@/app/bar";
 
 function page() {

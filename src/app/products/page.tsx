@@ -1,11 +1,10 @@
 'use client';
-import React from 'react'
 import { useRouter } from 'next/navigation';
 import Barra from '../bar';
 
 
 
-function productList() {
+function ProductList() {
   const router = useRouter();
 
   return (
@@ -31,4 +30,4 @@ function productList() {
 }
 
 
-export default productList;
+export default ProductList;

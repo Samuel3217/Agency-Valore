@@ -1,7 +1,6 @@
 
 import { TrianguloVerde, TrianguloAzul, TrianguloAmarillo } from "./triangulos";
 import Carousel from "./Carousel";
-import Menu from "./menu";
 import Barra from "./bar";
 import BarOfertas from "./products";
 import BarNew from "./barNew";

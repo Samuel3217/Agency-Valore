@@ -2,10 +2,16 @@ import React from 'react'
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import prisma from "@/lib/prisma";
 
-async function BarNew() {
+interface BarnewProps {
+  Limit?: number;
+}
+
+async function BarNew( { Limit }: BarnewProps ) {
+
+  let takeValue = Limit ? parseInt(Limit.toString()) : undefined;
 
     const nuevos = await prisma.nuevos.findMany({
-      take:5,
+      take:takeValue,
       orderBy: {createAt: 'desc'}
     });
     console.log(nuevos);

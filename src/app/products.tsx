@@ -2,10 +2,16 @@
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import prisma from "@/lib/prisma";
 
-async function BarOfertas() {
+interface BarOfertProps {
+  Limit?: number;
+}
+
+async function BarOfertas( { Limit}: BarOfertProps ) {
+
+  let takeValue = Limit ? parseInt( Limit.toString()) : undefined;
 
     const products = await prisma.product.findMany({
-      take:5,
+      take: takeValue,
       orderBy: {createAt: 'desc'}
     });
     console.log(products);

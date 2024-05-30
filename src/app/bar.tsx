@@ -1,16 +1,5 @@
 "use client";
 import { useRouter } from "next/navigation";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuIndicator,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  NavigationMenuViewport,
-} from "@/components/ui/navigation-menu"
-import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu"
 
 
 
@@ -24,7 +13,7 @@ const handleChangeImage = () => {
   };
 
   return (
-    <div className="shadow-indigo-600/40 shadow-xl mt-8 flex">
+    <div className="shadow-indigo-600/40 shadow-xl mt-5 flex">
     <img
       src="/images/valore.png"
       className="w-24 h-15 ml-10 mt-2"

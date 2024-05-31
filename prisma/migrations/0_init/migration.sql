@@ -1,5 +1,5 @@
 -- CreateTable if not exists
-CREATE TABLE "product" (
+CREATE TABLE if not exists"product" (
     "id" SERIAL NOT NULL,
     "name" TEXT NOT NULL,
     "description" TEXT,
@@ -12,7 +12,7 @@ CREATE TABLE "product" (
 );
 
 -- CreateTable if not exists
-CREATE TABLE "nuevos" (
+CREATE TABLE if not exists "nuevos" (
     "id" SERIAL NOT NULL,
     "name" TEXT NOT NULL,
     "description" TEXT,

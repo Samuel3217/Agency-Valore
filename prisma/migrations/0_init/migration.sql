@@ -1,4 +1,4 @@
--- CreateTable
+-- CreateTable if not exists
 CREATE TABLE "product" (
     "id" SERIAL NOT NULL,
     "name" TEXT NOT NULL,
@@ -11,7 +11,7 @@ CREATE TABLE "product" (
     CONSTRAINT "product_pkey" PRIMARY KEY ("id")
 );
 
--- CreateTable
+-- CreateTable if not exists
 CREATE TABLE "nuevos" (
     "id" SERIAL NOT NULL,
     "name" TEXT NOT NULL,

@@ -6,7 +6,6 @@ import {
   TableBody,
   TableCaption,
   TableCell,
-  TableFooter,
   TableHead,
   TableHeader,
   TableRow,
@@ -35,6 +34,10 @@ export default async function TableNewProducts() {
   } catch (error) {
     console.error("Error fetching or validating products:", error);
     return <div>Error loading products</div>;
+  }
+
+  if (!Array.isArray(products) || !products.length) {
+    return <div>No products available</div>;
   }
 
   return (

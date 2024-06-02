@@ -14,6 +14,16 @@ import {
 } from "@/components/ui/table";
 import Link from "next/link";
 
+interface Product {
+  id: number;
+  name: string;
+  description: string | null;
+  price: number;
+  picture: string | null;
+  createAt: string;
+  updatedAt: string;
+}
+
 export default async function TableNewProducts() {
     const products = await prisma.nuevos.findMany();
   

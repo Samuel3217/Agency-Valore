@@ -1,6 +1,7 @@
 'use client';
 import { useRouter } from 'next/navigation';
 import Barra from '../bar';
+import { Menu2 } from "../Menu2"
 
 
 
@@ -9,7 +10,9 @@ function ProductList() {
 
   return (
     <div className="">
+      <div className="mt-2 ml-2 w-[1325px]">
           <Barra/>
+          </div>
       <h1 className="mt-5 text-4xl text-center">Nuestros Servicios</h1>
       <button className="text-white font-light text-2xl hover:text-gray-200 text-center"  onClick={() => router.push('./products/Lonas')} >Lonas</button>
       <br/>
@@ -23,6 +26,7 @@ function ProductList() {
 
   
 
+      <Menu2/>
 
       
     </div> 

@@ -22,8 +22,8 @@ async function BarOfertas( { Limit}: BarOfertProps ) {
         {products.map((products) => (
           <Card key={products.id}>
             <CardHeader>{products.name}</CardHeader>
-            <CardContent>
-              <img className="h-32 hover:h-40 transition-all duration-300 opacity-80 hover:opacity-100" src={products.picture ?? ''}></img>
+            <CardContent className="">
+              <img className="h-32 hover:h-40 transition-all duration-300 opacity-80 hover:opacity-100 ml-7" src={products.picture ?? ''}></img>
               <p className="mt-4 text-xl">
                 {products.price}
                 </p>

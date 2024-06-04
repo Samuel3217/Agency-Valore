@@ -6,13 +6,20 @@ import {
     HoverCardTrigger,
   } from "@/components/ui/hover-card"
 import Link from "next/link"
+import Image from "next/image"
   
 export function Menu2() {
   return (
     <div className="fixed bottom-5 right-5  flex round">
     <HoverCard>
       <HoverCardTrigger asChild>
-        <Button variant="link" className="hover:text-gray-600 ">@Contactanos</Button>
+        <Image 
+        src="/images/menu.png"
+        alt="Contactanos"
+        height={50}
+        width={50}
+        className="opacity-80 hover:opacity-100 transition-all duration-500"
+        ></Image>
       </HoverCardTrigger>
       <HoverCardContent className="w-80">
         <div className="flex justify-between space-x-4">
@@ -63,6 +70,17 @@ export function Menu2() {
                                     className="text-sm hover:text-red-600 transition-all duration-300 block"
                                     >Gmail
                                     </Link>
+                                </li>
+                                <br></br>
+                                <li className="flex items-center">
+                                  <img src="/images/instagram.png"
+                                  className="w-7 hover:opacity-80 mr-2"
+                                  ></img>
+                                  <Link
+                                  href="https://www.instagram.com/agencia_valore/"
+                                  className="text-sm hover:text-orange-500 transition-all duration-300 block"
+                                  >Instagram
+                                  </Link>
                                 </li>
                             </ul>
             </div>

@@ -25,7 +25,7 @@ const handleChangeImage = () => {
       onClick={() => router.push("./products", { scroll: false })}
       
     >
-      Lo que ofrecemos!
+      Nuestros servicios
     </button>
 
     <button className="transition-all duration-300 text-black text-lg font-sans py-4 px-6 rounded ml-[-200px] text-center mx-auto relative overflow-hidden group hover:text-yellow-400"

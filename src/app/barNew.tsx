@@ -23,7 +23,7 @@ async function BarNew( { Limit }: BarnewProps ) {
           <Card key={nuevos.id}>
             <CardHeader>{nuevos.name}</CardHeader>
             <CardContent>
-              <img className="h-32 hover:h-40 transition-all duration-300 opacity-80 hover:opacity-100" src={nuevos.picture ?? ''}></img>
+              <img className="h-32 hover:h-40 transition-all duration-300 opacity-80 hover:opacity-100 ml-7" src={nuevos.picture ?? ''}></img>
               <p className="mt-4 text-xl">
                 {nuevos.price}
                 </p>

@@ -22,7 +22,7 @@ const handleChangeImage = () => {
     <button
       className="transition-all duration-300 text-black text-lg font-sans py-4 px-6 rounded hover:text-violet-500 mx-auto"
       type="button"
-      onClick={() => router.push("./products", { scroll: false })}
+      onClick={() => router.push("./servicios", { scroll: false })}
       
     >
       Nuestros servicios

@@ -12,7 +12,7 @@ function page() {
 
       <h1
       className="text-3xl font-bold hover:text-cyan-500 transition-all duration-300 text-center mt-10"
-      >Nuestros Aliados</h1>
+      >Convenios Empresariales</h1>
 
 
 <Footer />

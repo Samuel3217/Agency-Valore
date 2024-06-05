@@ -9,6 +9,8 @@ import Footer from "./footer";
 
 
 
+
+
 export default async function Page() {
 
 
@@ -39,6 +41,7 @@ export default async function Page() {
       <div className="mt-2 ml-2 w-[1325px]">
       <Barra />
       </div>
+      <br/>
 
       <h1 className="h-10 w-[100px] ml-[545px] transition-all duration-300 font-light text-5xl text-center mt-4 font-sans hover:text-cyan-400">
         Bienvenidos
@@ -106,6 +109,8 @@ export default async function Page() {
       <div>
         <Footer/>
       </div>
+
+      
       
     </div>
   );

@@ -1,9 +1,12 @@
-import React from 'react'
+import Barra from "@/app/bar";
+import { Menu2 }from "@/app/Menu2";
 
 function page() {
   return (
     <div>
-      si jala camisas
+      <Barra/>
+
+      <Menu2/>
     </div>
   )
 }

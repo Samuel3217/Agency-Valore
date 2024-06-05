@@ -19,36 +19,36 @@ import {
       title: "Camisas",
       href: "/servicios/camisas",
       description:
-        "Camisas personalizadas para cualquier persona y con cualquier diseño ",
+        "Camisas personalizadas muy aesthetic.",
     },
     {
       title: "Gorras",
       href: "/servicios/gorras",
       description:
-        "Gorras personalizada para cualquier persona y con cualquier diseño",
+        "Gorras personalizada para cualquier persona y con cualquier diseño.",
     },
     {
       title: "Impresiones",
       href: "/servicios/impresiones",
       description:
-        "Papel con colores, no se que mas decir, matan arboles por esto",
+        "Papel con colores, no se que mas poner, matan arboles por esto.",
     },
     {
       title: "Lonas",
       href: "/servicios/lonas",
-      description: "Cosas publicitarias para darle visto bueno a tu emprendimiento, ademas de que esta chida",
+      description: "Cosas publicitarias para darle visto bueno a tu emprendimiento.",
     },
     {
       title: "Consultorias",
       href: "/servicios/consultorias",
       description:
-        "Tutoriales en persona para ayudarles a ser una mejor empresa mas de lo que ya son",
+        "Tutoriales en persona para ayudarles a ser una mejor empresa mas de lo que ya son.",
     },
     {
       title: "otros",
       href: "/servicios/otros",
       description:
-        "Lo que la jefa diga que se agregue, se agrega *saca una pistola*",
+        "Lo que la jefa diga que se agregue, se agrega *saca una pistola*.",
     },
   ]
 

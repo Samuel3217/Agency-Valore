@@ -2,6 +2,7 @@
 import Barra from "../bar"
 import BarOfertas from '../products';
 import { Menu2 } from "../Menu2"
+import Footer from "../footer";
 
 export default function Page() {
   return (
@@ -22,6 +23,8 @@ export default function Page() {
     <div className="mt-10">
       <BarOfertas/>
     </div>
+
+    <Footer/>
     </div>
 
   )

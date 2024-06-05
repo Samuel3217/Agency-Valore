@@ -1,7 +1,7 @@
 import BarNew from '@/app/barNew'
 import Barra from "../bar"
 import { Menu2 } from "../Menu2"
-
+import Footer from "../footer";
 
 function page() {
   return (
@@ -17,6 +17,8 @@ function page() {
         <div className="mt-10 ml-[50px]">
             <BarNew/>
         </div>
+
+        <Footer/>
       
     </div>
   )

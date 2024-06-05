@@ -38,7 +38,7 @@ export default async function Page() {
   return (
     <div className="flex-justify items-center">
 
-      <div className="mt-2 ml-2 w-[1325px]">
+<div className="mt-2 ml-2 w-[1325px]">
       <Barra />
       </div>
       <br/>

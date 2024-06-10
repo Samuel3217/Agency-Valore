@@ -42,7 +42,7 @@ import {
       title: "Consultorias",
       href: "/servicios/consultorias",
       description:
-        "Tutoriales en persona para ayudarles a ser una mejor empresa mas de lo que ya son.",
+        "Tutoriales en persona para ayudarles a ser mejor.",
     },
     {
       title: "otros",
@@ -55,7 +55,7 @@ import {
   export function NavigationMenuDemo() {
   
     return(
-        <div>
+        
   <NavigationMenu>
   <NavigationMenuList>
     <NavigationMenuItem>
@@ -78,7 +78,7 @@ import {
     </NavigationMenuItem>
   </NavigationMenuList>
 </NavigationMenu>
-</div>
+
     )
   }
 

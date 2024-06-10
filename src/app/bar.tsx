@@ -11,11 +11,13 @@ const handleChangeImage = () => {
 
   return (
     <div className="shadow-indigo-600/40 shadow-xl mt-5 bg-slate-100 grid grid-cols-4 ">
+      <button>
     <img
       src="/images/valore.png"
       className="w-24 h-15 ml-10 mt-2 opacity-80 hover:opacity-100 transition-all duration-400 "
       onClick={handleChangeImage}
     />
+    </button>
 
 <div className="mt-3 ml-[-100px]">
       < NavigationMenuDemo/>

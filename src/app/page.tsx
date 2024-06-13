@@ -1,5 +1,4 @@
 
-import { TrianguloVerde, TrianguloAzul, TrianguloAmarillo } from "./triangulos";
 import Carousel from "./Carousel";
 import Barra from "./bar";
 import BarOfertas from "./products";
@@ -55,26 +54,6 @@ export default async function Page() {
         <br />
       </div>
       <br />
-
-      <p className="h-24 w-24 ml-40 mt-[-300px] transform rotate-180">
-        <TrianguloAmarillo></TrianguloAmarillo>
-      </p>
-      <p className=" h-24 w-24  rotate-45">
-        <TrianguloAzul></TrianguloAzul>
-      </p>
-      <p className=" h-24 w-24 mt-28 transform -rotate-12">
-        <TrianguloVerde></TrianguloVerde>
-      </p>
-      <p className=" h-24 w-24 ml-[1000px] mt-[-430px] rotate-90">
-        <TrianguloVerde></TrianguloVerde>
-      </p>
-      <p className=" h-24 w-24 ml-[1050px] rotate-12">
-        <TrianguloAzul></TrianguloAzul>
-      </p>
-
-      <p className=" h-24 w-24  ml-[1020px] mt-[143px] -rotate-90 ">
-        <TrianguloAmarillo></TrianguloAmarillo>
-      </p>
 
         <Menu2 />
       

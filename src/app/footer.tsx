@@ -14,7 +14,7 @@ function Footer() {
       <div>
         <br />
         <br />
-        <div className="flex items-center text-base hover:text-blue-700">
+        <div className="flex items-center text-base hover:text-blue-700 ">
           <img src="/images/compromiso.png" className="w-10 mr-2"></img>
           <Link href="/Compromiso" passHref>
             Nuestro compromiso

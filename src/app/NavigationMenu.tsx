@@ -60,7 +60,7 @@ import {
   <NavigationMenuList>
     <NavigationMenuItem>
       <NavigationMenuTrigger
-      className="bg-slate-100 hover:text-violet-400 transition-all duration-300 text-lg"
+      className="bg-blue-900 hover: text-white transition-all duration-300 text-lg"
       >Nuestros servicios</NavigationMenuTrigger>
       <NavigationMenuContent>
       <ul className="bg-slate-100 grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">

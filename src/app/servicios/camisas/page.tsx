@@ -25,31 +25,39 @@ function page() {
         <Carousel images={images} />
       </div>
 
-      <div>
+      <div className="flex flex-col">
         <h1 className="mt-10 w-25 text-3xl text-center text-blue-600">¿Que ofrecemos?</h1>
-        <div className="w-[650px] text-center ml-[100px] bg-gray-200 mt-10">
+        <div className="w-[650px] text-center ml-[350px] bg-gray-200 mt-10 ">
           <h1 className="mt-10 text-2xl text-gray-800">Diseños Personalizados:</h1> 
           <p className="mt-5">Tú imaginas, nosotros lo hacemos. Puedes
           elegir cualquier diseño, desde gráficos llamativos hasta mensajes
           especiales, y nosotros lo plasmamos en una camisa de alta calidad.
           </p>
           </div>
-          <div className="w-[650px] text-center ml-[380px] mt-5 bg-gray-200">
+          <div className="w-[650px] text-center ml-[350px] mt-5 bg-gray-200">
          <h1 className="text-2xl mt-10 text-gray-800">Variedad de Opciones:</h1>
           <p className="mt-5">Disponemos de una amplia gama de colores y
           estilos para que encuentres la camisa perfecta que se adapte a tu
           gusto y personalidad.
           </p>
           </div>
-          <div className="w-[650px] text-center ml-[600px] mt-5 bg-gray-200">
+          <div className="w-[650px] text-center ml-[350px] mt-5 bg-gray-200">
           <h1 className="text-2xl mt-10 text-gray-800 ">Materiales de Primera:</h1> 
           <p className="mt-5">Nuestras camisas están
           confeccionadas con materiales suaves y duraderos, garantizando
           comodidad y estilo en cada uso.
           </p>
           </div>
+          <div className="w-[700px] text-center ml-[330px] bg-gray-100 mt-20">
+          <h1 className="text-2xl mt-10 text-blue-600 ">¿Como tener la tuya?</h1> 
+          <p className="mt-5">Las camisas personalizadas se piden bajo encargo ya sea por medio
+            de los contactos digitales o en persona en la agencia, cualquiera de las 2 opciones 
+            permite pedirlas y obtener tu obra de arte en forma de camisa 
+          </p>
+          </div>
         
       </div>
+
 
       <div>
         <Menu2 />

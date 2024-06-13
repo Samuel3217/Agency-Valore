@@ -1,5 +1,6 @@
 import Barra from "@/app/bar";
 import { Menu2 }from "@/app/Menu2";
+import Footer from "@/app/footer";
 
 function page() {
   return (
@@ -10,6 +11,7 @@ function page() {
       </div>
 
       <Menu2/>
+      <Footer/>
     </div>
   )
 }

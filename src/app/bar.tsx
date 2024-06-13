@@ -10,7 +10,7 @@ const handleChangeImage = () => {
   };
 
   return (
-    <div className="shadow-indigo-600/40 shadow-xl mt-5 bg-slate-100 grid grid-cols-4 ">
+    <div className="shadow-indigo-200 shadow-xl mt-5 bg-blue-900 grid grid-cols-4 ">
       <button>
     <img
       src="/images/valore.png"
@@ -24,14 +24,14 @@ const handleChangeImage = () => {
       </div>
 
 
-    <button className="transition-all duration-300 text-black text-lg font-sans py-4 px-6 rounded ml-[-70px] text-center mx-auto relative overflow-hidden group hover:text-yellow-400"
+    <button className="transition-all duration-300 text-white text-lg font-sans py-4 px-6 rounded ml-[-70px] text-center mx-auto relative overflow-hidden group hover:text-yellow-400"
     type="button"
     onClick={() => router.push("./ofertas", { scroll: false })}
     >
    Ofertas
 </button>
 
-<button className="text-black transition-all duration-300 text-lg font-sans py-4 px-6 rounded ml-[-70px] text-center mx-auto relative overflow-hidden group hover:text-green-600"
+<button className="text-white transition-all duration-300 text-lg font-sans py-4 px-6 rounded ml-[-70px] text-center mx-auto relative overflow-hidden group hover:text-green-600"
     type="button"
     onClick={() => router.push("./Nuevo", { scroll: false })}
     >

@@ -14,7 +14,7 @@ function page() {
         Consultorias
       </h1>
 
-      <div className="flex mt-10 ml-[100px]">
+      <div className="flex mt-10 ml-[100px] gap-10">
       <div className="bg-gray-100 w-[450px] h-[400px]">
         <Image
           src="/images/consultoria.png"
@@ -26,7 +26,7 @@ function page() {
         </div>
       
         
-        <h1 className="ml-10 w-[550px]">
+        <h1 className="w-[550px]">
           Super titulo
           <p>
           Super texto aqui para definir las consultorias, que son, que ofrecemos y que posibles beneficios tendra en un futuro

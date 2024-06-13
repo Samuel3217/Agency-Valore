@@ -1,7 +1,5 @@
-// File: pages/compromiso.tsx
 
 import Image from "next/image";
-import React from "react";
 import Footer from "../footer";
 import { Menu2 } from "../Menu2";
 import Barra from "../bar";

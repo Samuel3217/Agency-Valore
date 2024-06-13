@@ -1,42 +1,37 @@
-"use client";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 import  { NavigationMenuDemo } from "./NavigationMenu"
 
 export default function Barra() {
-  const router = useRouter();
-
-const handleChangeImage = () => {
-    router.push("/");
-  };
 
   return (
-    <div className="shadow-indigo-200 shadow-xl mt-5 bg-blue-900 grid grid-cols-4 ">
-      <button>
+    <div className="shadow-gray-300 shadow-lg mt-5 bg-gray-100 grid grid-cols-7 rounded-xl h-16">
+      <div className="bg-cyan-600 rounded-xl h-16 hover:bg-cyan-700 transition-all duration-300">
+      <Link href="/">
     <img
-      src="/images/valore.png"
-      className="w-24 h-15 ml-10 mt-2 opacity-80 hover:opacity-100 transition-all duration-400 "
-      onClick={handleChangeImage}
+      src="/images/letters.png"
+      className="w-28 h-15 mt-[-20px] opacity-80 hover:opacity-100 transition-all duration-400 ml-[35px]"
     />
-    </button>
+    </Link>
+    </div>
 
-<div className="mt-3 ml-[-100px]">
+<div className="mt-2 ml-[200px]">
       < NavigationMenuDemo/>
       </div>
 
 
-    <button className="transition-all duration-300 text-white text-lg font-sans py-4 px-6 rounded ml-[-70px] text-center mx-auto relative overflow-hidden group hover:text-yellow-400"
+    <Link className="transition-all duration-300 text-xl font-sans py-4 px-6 rounded ml-[200px] text-center mx-auto relative overflow-hidden group hover:text-yellow-400"
     type="button"
-    onClick={() => router.push("./ofertas", { scroll: false })}
+    href="/ofertas"
     >
    Ofertas
-</button>
+</Link>
 
-<button className="text-white transition-all duration-300 text-lg font-sans py-4 px-6 rounded ml-[-70px] text-center mx-auto relative overflow-hidden group hover:text-green-600"
+<Link className=" transition-all duration-300 text-xl font-sans py-4 px-6 rounded ml-[200px] text-center mx-auto relative overflow-hidden group hover:text-green-600"
     type="button"
-    onClick={() => router.push("./Nuevo", { scroll: false })}
+    href="/Nuevo"
     >
    Nuevo
-</button>
+</Link>
 
 
 

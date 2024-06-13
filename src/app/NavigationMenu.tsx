@@ -19,7 +19,7 @@ import {
       title: "Camisas",
       href: "/servicios/camisas",
       description:
-        "Camisas personalizadas muy aesthetic.",
+        "Camisas personalizadas muy aesthetic muy bonitas la netota.",
     },
     {
       title: "Gorras",
@@ -60,10 +60,10 @@ import {
   <NavigationMenuList>
     <NavigationMenuItem>
       <NavigationMenuTrigger
-      className="bg-blue-900 hover: text-white transition-all duration-300 text-lg"
+      className="bg-cyan-600 text-white transition-all duration-300 text-lg mt-1"
       >Nuestros servicios</NavigationMenuTrigger>
-      <NavigationMenuContent>
-      <ul className="bg-slate-100 grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+      <NavigationMenuContent className="hover:text-gray-500">
+      <ul className="bg-gray-200 grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
               {components.map((component) => (
                 <ListItem
                   key={component.title}

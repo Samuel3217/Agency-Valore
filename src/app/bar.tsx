@@ -19,18 +19,25 @@ export default function Barra() {
       </div>
 
 
-    <Link className="transition-all duration-300 text-xl font-sans py-4 px-6 rounded ml-[200px] text-center mx-auto relative overflow-hidden group hover:text-yellow-400"
+    <Link className="transition-all duration-300 text-xl font-sans py-4 px-6 rounded ml-[200px] text-center mx-auto relative overflow-hidden group hover:text-cyan-500"
     type="button"
     href="/ofertas"
     >
    Ofertas
 </Link>
 
-<Link className=" transition-all duration-300 text-xl font-sans py-4 px-6 rounded ml-[200px] text-center mx-auto relative overflow-hidden group hover:text-green-600"
+<Link className=" transition-all duration-300 text-xl font-sans py-4 px-6 rounded ml-[200px] text-center mx-auto relative overflow-hidden group hover:text-cyan-500"
     type="button"
     href="/Nuevo"
     >
-   Nuevo
+   Nuevos
+</Link>
+
+<Link className="transition-all duration-300 text-xl font-sans py-4 px-6 rounded ml-[200px] text-center mx-auto relative overflow-hidden group w-42 mt-[-12px] hover:text-cyan-500"
+    href=""
+    type="button"
+>
+  Todos los productos
 </Link>
 
 

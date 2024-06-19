@@ -18,21 +18,16 @@ const Page = () => {
           Brindarle a todos nuestros clientes soluciones de mercadotecnia,
           publicidad y relaciones públicas, por medio de estrategias efectivas,
           útiles y funcionales, que les permita ver resultados.
-
-          <br/>
-
+          <br />
           <p className="text-2xl font-bold hover:text-cyan-500 transition-all duration-300 text-left mt-10">Nuestros valores</p>
-          <li className="items center justify-center text-left"> 
-            <ul className="hover:text-xl transition-all duration-300">Honestidad</ul>
-            <ul className="hover:text-xl transition-all duration-300">Responsabilidad</ul>
-            <ul className="hover:text-xl transition-all duration-300">Amor</ul>
-            </li>
-          <br/>
-
+          <ul className="items-center justify-center text-left">
+            <li className="hover:text-xl transition-all duration-300">Honestidad</li>
+            <li className="hover:text-xl transition-all duration-300">Responsabilidad</li>
+            <li className="hover:text-xl transition-all duration-300">Amor</li>
+          </ul>
+          <br />
           <p className="text-center opacity-95 text-2xl font-serif">"Crezcamos juntos"</p>
         </p>
-
-        
 
         <Image
           src="/images/compromiso.jpg"
@@ -40,9 +35,8 @@ const Page = () => {
           width={350}
           height={200}
           className="ml-5"
-        ></Image>
+        />
       </div>
-      
 
       <Footer />
     </div>

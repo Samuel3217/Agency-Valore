@@ -15,7 +15,6 @@ export default async function Page() {
     "/images/Tarjetas.jpg",
     "/images/diseño-marca.jpg",
     "/images/Diseños.jpg",
-    
   ];
 
   return (

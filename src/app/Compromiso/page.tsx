@@ -26,7 +26,7 @@ const Page = () => {
             <li className="hover:text-xl transition-all duration-300">Amor</li>
           </ul>
           <br />
-          <p className="text-center opacity-95 text-2xl font-serif">"Crezcamos juntos"</p>
+          <p className="text-center opacity-95 text-2xl font-serif">Crezcamos juntos</p>
         </p>
 
         <Image

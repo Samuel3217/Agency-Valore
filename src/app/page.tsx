@@ -1,8 +1,6 @@
 
 import Carousel from "./Carousel";
 import Barra from "./bar";
-import BarOfertas from "./products";
-import BarNew from "./barNew";
 import { Menu2 }from "./Menu2";
 import Footer from "./footer";
 
@@ -69,7 +67,7 @@ export default async function Page() {
       </a>
 
       <div className="mt-10 ml-[50px] shadow-lg p-4 bg-gray-200 w-[1255px] rounded-lg">
-        <BarOfertas Limit= {5} />
+
       </div>
       <br/>
 
@@ -82,7 +80,6 @@ export default async function Page() {
           </a>
       </div>
       <div className="mt-10 ml-[45px] shadow-lg p-4 bg-gray-200 w-[1255px] rounded-lg">
-        <BarNew Limit= {5}/>
       </div>
 
       <div>

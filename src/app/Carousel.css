@@ -1,18 +1,21 @@
 .carousel {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-  }
-  
-  .image-container {
-    display: flex;
-    transition: transform 0.5s ease;
-  }
-  
-  .image-container img {
-    flex: 0 0 auto;
-    width: 100%;
-    height: auto;
-  }
-  
-  
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.image-container {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.image-container .image-wrapper {
+  flex: 0 0 auto;
+  width: 100%;
+  position: relative; /* Necesario para que funcione el componente <Image> de Next.js */
+}
+
+.image-container .image-wrapper img {
+  width: 100%;
+  height: auto;
+}

@@ -16,39 +16,39 @@ import {
  
   const components: { title: string; href: string; description: string }[] = [
     {
-      title: "Camisas",
-      href: "/servicios/camisas",
+      title: "Imprenta",
+      href: "/servicios/imprenta",
       description:
-        "Camisas personalizadas muy aesthetic muy bonitas la netota.",
+        "Opciones que van desde Gran formato a impresion y diseño.",
     },
     {
-      title: "Gorras",
-      href: "/servicios/gorras",
+      title: "Branding Corporativo",
+      href: "/servicios/branding",
       description:
-        "Gorras personalizada para cualquier persona y con cualquier diseño.",
+        "Alcanza tus metas con nosotros, mejora tu imagen publicitaria.",
     },
     {
-      title: "Impresiones",
-      href: "/servicios/impresiones",
+      title: "Marketing digital",
+      href: "/servicios/marketing",
       description:
-        "Papel con colores, no se que mas poner, matan arboles por esto.",
+        "La mejor opcion para publicidad y contenido en las redes sociales.",
     },
     {
-      title: "Lonas",
-      href: "/servicios/lonas",
-      description: "Cosas publicitarias para darle visto bueno a tu emprendimiento.",
+      title: "Capacitacion empresarial",
+      href: "/servicios/capacitacion",
+      description: "Se la mejor version de ti mismo que sabemos que puedes ser.",
     },
     {
-      title: "Consultorias",
-      href: "/servicios/consultorias",
+      title: "Estrategia y gestion empresarial",
+      href: "/servicios/estrategia",
       description:
-        "Tutoriales en persona para ayudarles a ser mejor.",
+        "Planeamos tu camino hacia un exito rotundo.",
     },
     {
       title: "otros",
       href: "/servicios/otros",
       description:
-        "Lo que la jefa diga que se agregue, se agrega *saca una pistola*.",
+        "Proximamente, solo en cines tambien en 3D.",
     },
   ]
 

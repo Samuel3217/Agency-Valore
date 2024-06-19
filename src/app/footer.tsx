@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 function Footer() {
   return (
@@ -6,8 +7,8 @@ function Footer() {
 
       
       <Link className="" href="/">
-        <img src="images/ave.png" className="w-48 mt-buttonpx] ml-10 opacity-80 hover:opacity-100 transition-all duration-300"></img>
-        <img src="images/valore.png" className="w-48 mt-[-30px] ml-10 opacity-80 hover:opacity-100 transition-all duration-300"></img>
+        <Image alt="Logo de valore" width={60} height={20} src="/images/ave.png" className="w-48 mt-buttonpx] ml-10 opacity-80 hover:opacity-100 transition-all duration-300"></Image>
+        <Image alt="Logo de valore" width={60} height={20} src="/images/valore.png" className="w-48 mt-[-30px] ml-10 opacity-80 hover:opacity-100 transition-all duration-300"></Image>
       </Link>
 
       <div>

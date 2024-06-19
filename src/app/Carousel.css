@@ -6,16 +6,40 @@
 
 .image-container {
   display: flex;
-  transition: transform 0.5s ease;
+  transition: transform 2s ease;.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .image-container {
+    display: flex;
+    transition: transform 2s ease; /* Agregamos una transición para el cambio de imagen */
+  }
+  
+  .slide {
+    flex: 0 0 auto;
+    width: 100%;
+    height: 100%;
+    opacity: 0; /* Comenzamos con una opacidad de 0 para ocultar las imágenes */
+  }
+  
+  .slide.active {
+    opacity: 1; /* Cambiamos la opacidad a 1 para mostrar la imagen activa */
+  }
+
+  
 }
 
-.image-container .image-wrapper {
+
+
+.slide {
   flex: 0 0 auto;
   width: 100%;
-  position: relative; /* Necesario para que funcione el componente <Image> de Next.js */
+  height: 100%;
+  display: none;
 }
 
-.image-container .image-wrapper img {
-  width: 100%;
-  height: auto;
+.slide.active {
+  display: block;
 }

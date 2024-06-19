@@ -1,4 +1,4 @@
-"use client";
+"use client"
 import './Carousel.css';
 import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
@@ -27,20 +27,18 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
 
   return (
     <div className="carousel">
-      <div className="image-container" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
-        {images.map((image, index) => (
-          <div key={index} className={index === currentIndex ? 'active' : ''}>
-            <Image
-              src={image}
-              alt={`Image ${index + 1}`}
-              layout="responsive"
-              width={800} // Ajusta según sea necesario
-              height={600} // Ajusta según sea necesario
-              objectFit="cover"
-            />
-          </div>
-        ))}
-      </div>
+      {images.map((image, index) => (
+        <div key={index} className={`slide ${index === currentIndex ? 'active' : ''}`}>
+          <Image
+            src={image}
+            alt={`Image ${index + 1}`}
+            layout="responsive"
+            width={800} // Ajusta según sea necesario
+            height={600} // Ajusta según sea necesario
+            objectFit="cover"
+          />
+        </div>
+      ))}
     </div>
   );
 };

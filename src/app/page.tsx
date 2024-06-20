@@ -32,7 +32,7 @@ export default async function Page() {
       <div className="bg-gray-250 font-light text-sm w-96 mt-10 text-center ml-auto mr-auto">
        A tu agencia, nos especializamos en: Publicidad, Marketing y Relaciones publicas 
         <div className="bg-gray-500">
-          <Carousel images={images} />
+          <Carousel images={images} width={400} height={400}/>
         </div>
         <br />
       </div>

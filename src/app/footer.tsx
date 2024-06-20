@@ -42,6 +42,19 @@ function Footer() {
           </Link>
         </div>
       </div>
+
+      <div>
+        <div className="mt-12 flex items-center text-base hover:text-cyan-600">
+          <Image
+          src="/images/equipo.png"
+          alt="equipo de trabajo"
+          width={40}
+          height={50}
+          className="w-10 mr-2"
+          ></Image>
+          <Link href="/Equipo">Nuestro equipo</Link>
+        </div>
+      </div>
     </div>
   );
 }

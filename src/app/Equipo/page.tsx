@@ -10,15 +10,10 @@ function page() {
         <Barra />
       </div>
 
-      <div className="mt-10 ml-[400px] shadow-lg w-[580px]">
-        <Image
-        src="/images/horarios.png"
-        alt="Horario de apertura de la agencia"
-        width={600}
-        height={500}
-        ></Image>
+      <div>
+        <h1 className="text-3xl font-bold hover:text-cyan-500 transition-all duration-300 text-center mt-10"
+        >Nuestro equipo</h1>
       </div>
-
         <Menu2/>
 
       <Footer/>

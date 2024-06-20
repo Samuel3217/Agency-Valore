@@ -17,7 +17,8 @@ function page() {
 
       <h1
       className='text-2xl font-bold text-cyan-600 transition-all duration-300 text-center mt-10'
-      >"Trabajemos juntos para mostrar la mejor version de nosotros"</h1>
+      >&quot;Trabajemos juntos para mostrar la mejor version de nosotros&quot;
+</h1>
 
       <div className='grid grid-cols-5 ml-10 mt-16 gap-10'>
 

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import './Carousel.css';
@@ -36,7 +36,7 @@ const Carousel: React.FC<CarouselProps> = ({ images, width = 800, height = 600 }
             alt={`Image ${index + 1}`}
             width={width} // Usar dimensiones personalizadas
             height={height} // Usar dimensiones personalizadas
-            objectFit="cover"
+            style={{ objectFit: 'cover' }} // Actualiza aquí el uso de objectFit
           />
         </div>
       ))}

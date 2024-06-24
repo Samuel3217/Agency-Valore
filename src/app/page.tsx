@@ -25,7 +25,7 @@ export default async function Page() {
       </div>
       <br/>
 
-      <h1 className="h-10 w-[100px] ml-[545px] transition-all duration-300 font-light text-5xl text-center mt-4 font-sans hover:text-blue-800">
+      <h1 className="h-10 w-[100px] ml-[545px] transition-all duration-300 font-light text-5xl text-center mt-4 font-sans hover:text-cyan-700">
         Bienvenidos
       </h1>
 

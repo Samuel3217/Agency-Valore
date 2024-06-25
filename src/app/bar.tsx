@@ -1,5 +1,6 @@
 import Link from "next/link";
 import  { NavigationMenuDemo } from "./NavigationMenu"
+import Image from "next/image";
 
 export default function Barra() {
 
@@ -38,6 +39,18 @@ export default function Barra() {
     type="button"
 >
   Todos los productos
+</Link>
+
+<Link
+href="/Login"
+>
+  <Image
+  src="/images/login.png"
+  alt="Login"
+  width={50}
+  height={30}
+  className="rounded-full mt-[6px] ml-[300px] hover:bg-gray-300 transition-all duration-500"
+  ></Image>
 </Link>
 
 

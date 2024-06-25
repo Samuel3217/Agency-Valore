@@ -4,7 +4,7 @@ import Image from "next/image";
 
 function Footer() {
   return (
-    <div className="bg-gray-200 w-[1330px] h-[320px] grid grid-cols-4 mt-10 gap-4">
+    <div className="bg-gray-200 w-[1320px] h-[320px] grid grid-cols-4 mt-10 gap-4 ml-4">
 
       
       <Link className="" href="/" >

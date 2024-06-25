@@ -29,9 +29,7 @@ function page() {
           width={200}
           height={30}
           ></Image>
-          <p
-          className="justify-center text-center bg-blue-800 mt-2 text-white w-[200px] rounded-2xl"
-          >Universidad de estudios avanzados</p>
+          
         </div>
 
         <div className='shadow-lg w-[240px]'>
@@ -42,11 +40,7 @@ function page() {
           height={30}
           >
           </Image>
-          <p
-          className='justify-center text-center bg-red-700 text-white text mt-5 w-[240px] h-10 rounded-2xl'
-          >
-            Marchand
-          </p>
+     
         </div>
 
         <div className='shadow-lg w-[240px]'>
@@ -56,11 +50,7 @@ function page() {
           width={300}
           height={30}
           ></Image>
-          <p
-          className="justify-center text-center bg-blue-400 text-white text mt-4 w-[240px] h-10 rounded-2xl"
-          >
-            Farmaprecio
-          </p>
+
         </div>
 
         <div className='shadow-lg w-[200px] mt-[-50px] ' >
@@ -71,9 +61,7 @@ function page() {
           height={30}
           className='ml-8'
           ></Image>
-          <p className='justify-center text-center bg-yellow-500 text-white text mt-4 w-[200px] h-10 rounded-2xl'>
-            ENSFA
-          </p>
+
         </div>
 
         <div className='shadow-lg w-[250px] ml-[-40px]'>
@@ -83,10 +71,9 @@ function page() {
           width={250}
           height={30}
           ></Image>
-          <p className='justify-center text-center bg-orange-500 text-white text mt-6 w-[250px] h-10 rounded-2xl'>
-            Universidad la Concordia
-          </p>
+
         </div>
+        <div className="mt-32" ></div>
 
       </div>
 

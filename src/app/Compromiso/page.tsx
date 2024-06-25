@@ -17,10 +17,10 @@ const Page = () => {
         <p className="mt-4 text-center">
           Brindarle a todos nuestros clientes soluciones de mercadotecnia,
           publicidad y relaciones públicas, por medio de estrategias efectivas,
-          útiles y funcionales, que les permita ver resultados.
+          útiles y funcionales, que les permita ver resultados reales.
           <br />
-          <p className="text-2xl font-bold hover:text-cyan-500 transition-all duration-300 text-left mt-10">Nuestros valores</p>
-          <ul className="items-center justify-center text-left">
+          <p className="text-2xl font-bold hover:text-cyan-500 transition-all duration-300 text-center mt-10">Nuestros valores</p>
+          <ul className="items-center justify-center text-riight">
             <li className="hover:text-xl transition-all duration-300">Honestidad</li>
             <li className="hover:text-xl transition-all duration-300">Responsabilidad</li>
             <li className="hover:text-xl transition-all duration-300">Amor</li>

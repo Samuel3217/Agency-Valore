@@ -18,12 +18,12 @@ function page() {
         <Image
           src="/images/branding.jpg"
           alt="imagen de branding"
-          width={400}
+          width={300}
           height={30}
           className="rounded-2xl"
         ></Image>
 
-      <p className="text-2xl mt-[200px] text-justify ml-[-140px] w-[700px]">
+      <p className="text-2xl mt-[200px] text-justify ml-[-100px] w-[700px]">
         Somos tu equipo de profesionales creativos. Trabajamos en conjunto para
         ayudar a las empresas, freelance; para que todos nuestros clientesa
         alcancen sus objetivos comerciales y/o de comunicación, mediante

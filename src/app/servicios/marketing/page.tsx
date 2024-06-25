@@ -19,7 +19,7 @@ function page() {
         <Image
         src="/images/digital.jpg" 
         alt="Marketing Digital"
-        width={400}
+        width={300}
         height={30}
         className="ml-20 mt-10 rounded-2xl"
         ></Image>

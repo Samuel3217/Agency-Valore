@@ -19,7 +19,7 @@ import {
       title: "Imprenta",
       href: "/servicios/imprenta",
       description:
-        "Opciones que van desde Gran formato a impresion y diseño.",
+        "Opciónes que van desde Gran formato a impresión y diseño.",
     },
     {
       title: "Branding Corporativo",
@@ -31,24 +31,24 @@ import {
       title: "Marketing digital",
       href: "/servicios/marketing",
       description:
-        "La mejor opcion para publicidad y contenido en las redes sociales.",
+        "La mejor opción para publicidad y contenido en las redes sociales.",
     },
     {
-      title: "Capacitacion empresarial",
+      title: "Capacitación empresarial",
       href: "/servicios/capacitacion",
-      description: "Se la mejor version de ti mismo que sabemos que puedes ser.",
+      description: "Se la mejor versión de ti mismo que sabemos que puedes ser.",
     },
     {
-      title: "Estrategia y gestion empresarial",
+      title: "Estrategia y gestión empresarial",
       href: "/servicios/estrategia",
       description:
-        "Planeamos tu camino hacia un exito rotundo.",
+        "Planeamos tu camino hacia un exito asegurado.",
     },
     {
-      title: "otros",
+      title: "¿Buscas algo mas?",
       href: "/servicios/otros",
       description:
-        "Proximamente, solo en cines tambien en 3D.",
+        "Tengamos una cita, ¿te parece bien?.",
     },
   ]
 

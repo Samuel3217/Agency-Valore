@@ -3,6 +3,8 @@ import Carousel from "./Carousel";
 import Barra from "./bar";
 import { Menu2 }from "./Menu2";
 import Footer from "./footer";
+import BarNew   from "./BarNew";
+import Link from "next/link";
 
 
 
@@ -44,12 +46,12 @@ export default async function Page() {
         <img  className=""src="/images/envios.png"></img>
       </div>
       <br/>
-      <a 
-      className="items center text-3xl font-sans ml-[625px] hover:text-red-600 transition-all duration-300 m"
+      <Link
+      className="items center text-3xl font-sans ml-[625px] hover:text-cyan-700 transition-all duration-300 m"
       href="/ofertas"
       >
         ¡¡Ofertas!!
-      </a>
+      </Link>
 
       <div className="mt-10 ml-[50px] shadow-lg p-4 bg-gray-200 w-[1255px] rounded-lg">
 
@@ -57,14 +59,16 @@ export default async function Page() {
       <br/>
 
       <div>
-        <a 
-        className="items-center text-3xl font-sans ml-[625px] mt-10 hover:text-green-500 transition-all duration-300"
-        href="/Nuevo"
+        <Link
+        className="items-center text-3xl font-sans ml-[625px] mt-10 hover:text-cyan-700 transition-all duration-300"
+        href="/Nuevos"
         >
           ¡¡Nuevos!!
-          </a>
+          </Link>
       </div>
+
       <div className="mt-10 ml-[45px] shadow-lg p-4 bg-gray-200 w-[1255px] rounded-lg">
+        <BarNew Limit={5}/>
       </div>
 
       <div>

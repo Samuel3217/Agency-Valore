@@ -29,13 +29,13 @@ export default function Barra() {
 
 <Link className=" transition-all duration-300 text-xl font-sans py-4 px-6 rounded ml-[200px] text-center mx-auto relative overflow-hidden group hover:text-cyan-500"
     type="button"
-    href="/Nuevo"
+    href="/Nuevos"
     >
    Nuevos
 </Link>
 
 <Link className="transition-all duration-300 text-xl font-sans py-4 px-6 rounded ml-[200px] text-center mx-auto relative overflow-hidden group w-42 mt-[-12px] hover:text-cyan-500"
-    href=""
+    href="/Productos"
     type="button"
 >
   Todos los productos

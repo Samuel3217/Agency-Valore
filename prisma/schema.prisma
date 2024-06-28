@@ -1,10 +1,122 @@
 generator client {
   provider = "prisma-client-js"
-  previewFeatures = ["driverAdapters"]
 }
 
 datasource db {
   provider  = "postgresql"
   url       = env("DATABASE_URL")
   directUrl = env("DIRECT_URL")
+}
+
+model afiliados {
+  afiliado_Id          Int       @id @default(autoincrement())
+  nombre_empresa       String?   @db.VarChar(100)
+  nombre_persona       String?   @db.VarChar(100)
+  email                String    @db.VarChar(100)
+  telefono             String    @db.VarChar(15)
+  direccion            String    @db.VarChar(500)
+  birthday             DateTime? @db.Date
+  descuento_porcentaje Float?
+  ventas               ventas[]
+}
+
+model categoria_promocion {
+  categoriaPromo_Id Int         @id @default(autoincrement())
+  categoria_Id      Int
+  promocion_Id      Int
+  categorias        categorias  @relation(fields: [categoria_Id], references: [categoria_Id], onDelete: Cascade)
+  promociones       promociones @relation(fields: [promocion_Id], references: [promocion_Id], onDelete: Cascade)
+
+  @@unique([categoria_Id, promocion_Id])
+}
+
+model categorias {
+  categoria_Id        Int                   @id @default(autoincrement())
+  nombre              String                @db.VarChar(100)
+  categoria_promocion categoria_promocion[]
+  productos           productos[]
+}
+
+model detallesVenta {
+  detallesVenta_Id Int   @id @default(autoincrement())
+  venta_Id         Int
+  producto_Id      Int
+  cantidad         Int
+  precio           Float
+}
+
+model empleados {
+  empleado_Id Int    @id @default(autoincrement())
+  nombre      String @db.VarChar(150)
+  correo      String @db.VarChar(100)
+  contrase_a  String @map("contraseña") @db.VarChar(100)
+  imagen      String @db.VarChar(100)
+  rol_Id      Int
+  roles       roles  @relation(fields: [rol_Id], references: [rol_Id], onDelete: Cascade)
+}
+
+model producto_promocion {
+  productoPromo_Id Int         @id @default(autoincrement())
+  producto_Id      Int
+  promocion_Id     Int
+  productos        productos   @relation(fields: [producto_Id], references: [producto_Id], onDelete: Cascade)
+  promociones      promociones @relation(fields: [promocion_Id], references: [promocion_Id], onDelete: Cascade)
+
+  @@unique([producto_Id, promocion_Id])
+}
+
+model productos {
+  producto_Id        Int                  @id @default(autoincrement())
+  nombre             String               @db.VarChar(100)
+  descripcion        String               @db.VarChar(500)
+  precio             Float
+  stock              Int
+  imagen             String               @db.VarChar(100)
+  categoria_Id       Int
+  createdAt          DateTime?            @db.Date
+  producto_promocion producto_promocion[]
+  categorias         categorias           @relation(fields: [categoria_Id], references: [categoria_Id], onDelete: Cascade)
+}
+
+model promociones {
+  promocion_Id        Int                   @id @default(autoincrement())
+  nombre              String                @db.VarChar(100)
+  tipo                String                @db.VarChar(100)
+  descuento           Float?
+  comprar_cantidad    Int?
+  pagar_cantidad      Int?
+  por_cada            Float?
+  fecha_inicio        DateTime              @db.Timestamptz(6)
+  fecha_fin           DateTime              @db.Timestamptz(6)
+  categoria_promocion categoria_promocion[]
+  producto_promocion  producto_promocion[]
+}
+
+model roles {
+  rol_Id    Int         @id @default(autoincrement())
+  rol       String      @db.VarChar(50)
+  empleados empleados[]
+}
+
+model usuarios {
+  usuario_Id Int       @id @default(autoincrement())
+  nombre     String    @db.VarChar(100)
+  usuario    String    @unique @db.VarChar(50)
+  correo     String    @unique @db.VarChar(100)
+  password   String    @db.VarChar(255)
+  direccion  String    @db.VarChar(500)
+  birthday   DateTime? @db.Date
+  ventas     ventas[]
+}
+
+model ventas {
+  venta_Id     Int        @id @default(autoincrement())
+  usuario_Id   Int?
+  afiliado_Id  Int?
+  tipo_usuario String     @db.VarChar(50)
+  metodo_pago  String     @db.VarChar(50)
+  total        Float
+  fecha        DateTime   @db.Date
+  afiliados    afiliados? @relation(fields: [afiliado_Id], references: [afiliado_Id], onDelete: Cascade)
+  usuarios     usuarios?  @relation(fields: [usuario_Id], references: [usuario_Id], onDelete: Cascade)
 }

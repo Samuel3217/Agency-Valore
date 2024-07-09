@@ -1,8 +1,10 @@
+// /src/app/AdminProductos/productAction.tsx
+
 "use server";
 
 import prisma from "@/lib/prisma";
-import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
+import { redirect } from "next/navigation";
 
 export async function CreateProduct(formData: FormData) {
   const nombre = formData.get("nombre")?.toString();
@@ -24,20 +26,27 @@ export async function CreateProduct(formData: FormData) {
     return;
   }
 
-  const newProduct = await prisma.productos.create({
-    data: {
-      nombre,
-      descripcion,
-      precio,
-      imagen,
-      stock,
-      categoria_Id,
-      createdAt,
-    },
-  });
+  try {
+    const newProduct = await prisma.productos.create({
+      data: {
+        nombre,
+        descripcion,
+        precio,
+        imagen,
+        stock,
+        categoria_Id,
+        createdAt,
+      },
+    });
 
-  console.log(newProduct);
-  redirect("/");
+    console.log("Nuevo producto creado:", newProduct);
+
+  } catch (error) {
+    console.error("Error al crear el producto:", error);
+    throw new Error("Hubo un problema al crear el producto. Por favor, inténtalo de nuevo más tarde.");
+  }
+
+  redirect("/"); // Usa redirect aquí fuera del bloque try-catch
 }
 
 export async function DeleteProduct(formData: FormData) {
@@ -97,5 +106,5 @@ export async function UpdateProduct(formData: FormData) {
     },
   });
 
-  redirect("/adminNuevos");
+  redirect("/AdminProductos");
 }

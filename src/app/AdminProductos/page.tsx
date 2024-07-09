@@ -1,3 +1,4 @@
+import Link from "next/link"
 import Barra from "../bar"
 import TablaProductos from "./tables"
 
@@ -11,6 +12,11 @@ function page() {
       <div>
         <TablaProductos/>
       </div>
+
+      <Link href="/nuevoProducto" className="mt-10 w-[100px] h-[30px] ml-[640px] rounded-xl  hover:bg-gray-200 transition-all duration-200 hover:text-green-600 text-lg " >Agregar</Link>
+    
+      <br/>
+      <br/>
 
       
 

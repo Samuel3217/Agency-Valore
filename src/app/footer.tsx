@@ -8,8 +8,8 @@ function Footer() {
 
       
       <Link className="" href="/" >
-        <Image alt="Logo de valore" width={60} height={20} src="/images/ave.png" className="w-48 mt-[30px] ml-10"></Image>
-        <Image alt="Logo de valore" width={60} height={20} src="/images/valore.png" className="w-48 mt-[-30px] ml-10 "></Image>
+        <Image alt="Logo de valore" width={200} height={20} src="/images/ave.png" className="mt-[30px] ml-10"></Image>
+        <Image alt="Logo de valore" width={200} height={20} src="/images/valore.png" className="mt-[-30px] ml-10 "></Image>
       </Link>
 
       <div>

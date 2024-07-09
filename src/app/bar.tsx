@@ -8,9 +8,12 @@ export default function Barra() {
     <div className="shadow-gray-300 shadow-lg mt-5 bg-gray-100 grid grid-cols-7 rounded-xl h-16">
       <div className="bg-cyan-600 rounded-xl h-16 hover:bg-cyan-700 transition-all duration-300">
       <Link href="/">
-    <img
+    <Image
+      alt="Valore"
+      width={110}
+      height={20}
       src="/images/letters.png"
-      className="w-28 h-15 mt-[-20px] opacity-80 hover:opacity-100 transition-all duration-400 ml-[35px]"
+      className="h-15 mt-[-20px] opacity-80 hover:opacity-100 transition-all duration-400 ml-[35px]"
     />
     </Link>
     </div>

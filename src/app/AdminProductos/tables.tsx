@@ -53,6 +53,7 @@ export default async function TablaProductos() {
       <TableCaption>Ofertas disponibles</TableCaption>
       <TableHeader>
         <TableRow>
+        <TableHead>ID</TableHead>
           <TableHead className="w-[100px]">Nombre</TableHead>
           <TableHead>Precio</TableHead>
           <TableHead>Imagen</TableHead>
@@ -64,6 +65,7 @@ export default async function TablaProductos() {
       <TableBody>
         {productos.map((productos) => (
           <TableRow key={productos.producto_Id}>
+            <TableCell className="font-medium text-emerald-600">{productos.producto_Id}</TableCell>
             <TableCell className="font-medium">{productos.nombre}</TableCell>
             <TableCell>{productos.precio}</TableCell>
             <TableCell>{productos.imagen}</TableCell>
@@ -73,7 +75,7 @@ export default async function TablaProductos() {
             </TableCell>
             <TableCell className="flex gap-3">
               <Link
-                href={`ProductoAdmin/${productos.producto_Id}/edit`}
+                href={`editProducto/${productos.producto_Id}/edit`}
                 className={buttonVariants({ variant: "secondary" })}
               >
                 Editar

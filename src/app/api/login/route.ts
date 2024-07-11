@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
-import prisma from '../../../lib/prisma';
+import prisma from '@/lib/prisma';
 
 const JWT_SECRET = process.env.JWT_SECRET || 'your_secret_key';
 
@@ -42,15 +42,18 @@ export async function POST(req: NextRequest) {
         // Configurar la cookie
         const cookie = `authToken=${token}; HttpOnly; Path=/; Max-Age=3600`;
 
-        return NextResponse.json({ message: 'Inicio de sesión exitoso', redirect: '/' }, {
+        // Redirección basada en el tipo de usuario
+        const redirectUrl = user.isEmployee ? '/AdminProductos' : '/';
+
+        return NextResponse.json({ message: 'Inicio de sesión exitoso', redirect: redirectUrl }, {
           headers: { 'Set-Cookie': cookie }
         });
         
       } else {
-        return NextResponse.json({ error: 'Contraseña incorrecta' }, { status: 401 });
+        return NextResponse.json({ error: 'Contaseña o correo incorrectos' }, { status: 401 });
       }
     } else {
-      return NextResponse.json({ error: 'Usuario no encontrado' }, { status: 404 });
+      return NextResponse.json({ error: 'Contraseña o correo incorrectos' }, { status: 404 });
     }
   } catch (error) {
     console.error('Error de autenticación:', error);

@@ -61,6 +61,7 @@ model producto_promocion {
   promocion_Id     Int
   productos        productos   @relation(fields: [producto_Id], references: [producto_Id], onDelete: Cascade)
   promociones      promociones @relation(fields: [promocion_Id], references: [promocion_Id], onDelete: Cascade)
+  
 
   @@unique([producto_Id, promocion_Id])
 }

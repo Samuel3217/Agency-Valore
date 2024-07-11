@@ -3,8 +3,6 @@
 "use server";
 
 import prisma from "@/lib/prisma";
-import { revalidatePath } from "next/cache";
-import { redirect } from "next/navigation";
 
 export async function CreatePromocion(formData: FormData) {
   
@@ -34,7 +32,6 @@ export async function CreatePromocion(formData: FormData) {
     throw new Error("Hubo un problema al crear la promocion. Por favor, inténtalo de nuevo más tarde.");
   }
 
-  redirect("/AdminPromociones"); // Usa redirect aquí fuera del bloque try-catch
 }
 
 export async function DeletePromocion(formData: FormData) {
@@ -55,7 +52,6 @@ export async function DeletePromocion(formData: FormData) {
       productoPromo_Id: productoPromo_Id,
     },
   });
-  revalidatePath("/adminPromociones");
 }
 
 export async function UpdatePromocion(formData: FormData) {
@@ -81,5 +77,4 @@ export async function UpdatePromocion(formData: FormData) {
     },
   });
 
-  redirect("/AdminPromociones");
 }

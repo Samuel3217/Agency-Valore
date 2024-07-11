@@ -14,11 +14,11 @@ export function Menu2() {
     <HoverCard>
       <HoverCardTrigger asChild>
         <Image 
-        src="/images/burbuja.png"
+        src="/images/telefono.png"
         alt="Contactanos"
         height={50}
         width={50}
-        className="hover:opacity-70 opacity-100 transition-all duration-500"
+        className="hover:opacity-70 opacity-100 transition-all duration-500 bg-gray-200 hover:bg-white rounded-full"
         ></Image>
       </HoverCardTrigger>
       <HoverCardContent className="w-80">

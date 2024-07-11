@@ -67,7 +67,6 @@ export async function DeleteProduct(formData: FormData) {
       producto_Id: producto_Id,
     },
   });
-  revalidatePath("/adminProductos");
 }
 
 export async function UpdateProduct(formData: FormData) {

@@ -51,7 +51,7 @@ export async function POST(req: NextRequest) {
       const isMatch = await bcrypt.compare(password, user.password);
       if (isMatch) {
         // Generar el token JWT
-        const token = jwt.sign({ correo: user.correo, isEmployee: user.isEmployee }, JWT_SECRET, { expiresIn: '1h' });
+         const token = jwt.sign({ correo: user.correo, isEmployee: user.isEmployee }, JWT_SECRET, { expiresIn: '1h' });
 
         // Configurar la cookie
         const cookie = `authToken=${token}; HttpOnly; Path=/; Max-Age=3600`;

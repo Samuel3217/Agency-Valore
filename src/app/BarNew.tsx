@@ -25,7 +25,7 @@ async function BarNew({ Limit }: BarnewProps): Promise<JSX.Element> {
 
   return (
     <div className="grid grid-cols-5 gap-4 overflow-hidden">
-      {productos.map((producto) => (
+      {productos.map((producto: any) => (
         <Card key={producto.producto_Id}>
           <CardHeader>{producto.nombre}</CardHeader>
           <CardContent>

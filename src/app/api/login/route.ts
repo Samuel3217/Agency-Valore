@@ -1,9 +1,23 @@
+// api/login/route.ts
+
 import { NextRequest, NextResponse } from 'next/server';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import prisma from '@/lib/prisma';
 
 const JWT_SECRET = process.env.JWT_SECRET || 'your_secret_key';
+
+// Definición del tipo User
+type User = {
+  usuario_Id?: number;
+  nombre?: string;
+  usuario?: string;
+  correo: string;
+  password: string;
+  direccion?: string;
+  birthday?: Date | null;
+  isEmployee?: boolean;
+};
 
 export async function POST(req: NextRequest) {
   try {
@@ -14,7 +28,7 @@ export async function POST(req: NextRequest) {
     }
 
     // Buscar en la tabla de usuarios
-    let user = await prisma.usuarios.findUnique({
+    let user: User | null = await prisma.usuarios.findUnique({
       where: { correo: correo },
     });
 
@@ -34,7 +48,7 @@ export async function POST(req: NextRequest) {
     }
 
     if (user) {
-      const isMatch = await bcrypt.compare(password, user.password || user.contrase_a);
+      const isMatch = await bcrypt.compare(password, user.password);
       if (isMatch) {
         // Generar el token JWT
         const token = jwt.sign({ correo: user.correo, isEmployee: user.isEmployee }, JWT_SECRET, { expiresIn: '1h' });

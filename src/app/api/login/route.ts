@@ -41,7 +41,7 @@ export async function POST(req: NextRequest) {
       if (employee) {
         user = {
           correo: employee.correo,
-          password: employee.contrase_a,
+          password: employee.contrase_a, // Usa el nombre del campo Prisma
           isEmployee: true,
         };
       }
@@ -64,13 +64,20 @@ export async function POST(req: NextRequest) {
         });
         
       } else {
-        return NextResponse.json({ error: 'Contaseña o correo incorrectos' }, { status: 401 });
+        return NextResponse.json({ error: 'Contraseña o correo incorrectos' }, { status: 401 });
       }
     } else {
       return NextResponse.json({ error: 'Contraseña o correo incorrectos' }, { status: 404 });
     }
   } catch (error) {
-    console.error('Error de autenticación:', error);
+    if (error instanceof Error) {
+      console.error('Error de autenticación:', {
+        message: error.message,
+        stack: error.stack,
+      });
+    } else {
+      console.error('Error de autenticación desconocido:', error);
+    }
     return NextResponse.json({ error: 'Error interno del servidor' }, { status: 500 });
   }
 }

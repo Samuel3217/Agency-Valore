@@ -1,3 +1,5 @@
+// src/app/AdminProductos/tables.tsx
+
 import prisma from "@/lib/prisma";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { DeleteProduct } from "./productAction";
@@ -31,11 +33,11 @@ export default async function TablaProductos() {
 
   try {
     const result = await prisma.productos.findMany();
-    productos = result.map((productos) => {
+    productos = result.map((producto): Product => {
       // Asegurarse de que createdAt sea una fecha válida o proporcionar un valor predeterminado
-      const createdAt = productos.createdAt ? new Date(productos.createdAt) : new Date();
+      const createdAt = producto.createdAt ? new Date(producto.createdAt) : new Date();
       return productSchema.parse({
-        ...productos,
+        ...producto,
         createdAt: createdAt,
       });
     });
@@ -53,7 +55,7 @@ export default async function TablaProductos() {
       <TableCaption>Ofertas disponibles</TableCaption>
       <TableHeader>
         <TableRow>
-        <TableHead>ID</TableHead>
+          <TableHead>ID</TableHead>
           <TableHead className="w-[100px]">Nombre</TableHead>
           <TableHead>Precio</TableHead>
           <TableHead>Imagen</TableHead>
@@ -63,25 +65,25 @@ export default async function TablaProductos() {
         </TableRow>
       </TableHeader>
       <TableBody>
-        {productos.map((productos) => (
-          <TableRow key={productos.producto_Id}>
-            <TableCell className="font-medium text-emerald-600">{productos.producto_Id}</TableCell>
-            <TableCell className="font-medium">{productos.nombre}</TableCell>
-            <TableCell>{productos.precio}</TableCell>
-            <TableCell>{productos.imagen}</TableCell>
-            <TableCell>{productos.descripcion}</TableCell>
+        {productos.map((producto) => (
+          <TableRow key={producto.producto_Id}>
+            <TableCell className="font-medium text-emerald-600">{producto.producto_Id}</TableCell>
+            <TableCell className="font-medium">{producto.nombre}</TableCell>
+            <TableCell>{producto.precio}</TableCell>
+            <TableCell>{producto.imagen}</TableCell>
+            <TableCell>{producto.descripcion}</TableCell>
             <TableCell>
-              <span>{productos.createdAt.toLocaleDateString()}</span>
+              <span>{producto.createdAt.toLocaleDateString()}</span>
             </TableCell>
             <TableCell className="flex gap-3">
               <Link
-                href={`editProducto/${productos.producto_Id}/edit`}
+                href={`editProducto/${producto.producto_Id}/edit`}
                 className={buttonVariants({ variant: "secondary" })}
               >
                 Editar
               </Link>
               <form action={DeleteProduct}>
-                <input type="hidden" name="producto_Id" value={productos.producto_Id} />
+                <input type="hidden" name="producto_Id" value={producto.producto_Id} />
                 <Button variant="destructive">Delete</Button>
               </form>
             </TableCell>

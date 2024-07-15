@@ -1,3 +1,5 @@
+// src/app/AdminPromociones/table.tsx
+
 import prisma from "@/lib/prisma";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { DeletePromocion } from "./promocionAction";
@@ -17,7 +19,6 @@ const promocionSchema = z.object({
   productoPromo_Id: z.number(),
   producto_Id: z.number(),
   promocion_Id: z.number(),
-
 });
 
 type Promocion = z.infer<typeof promocionSchema>;
@@ -27,9 +28,7 @@ export default async function TablaPromociones() {
 
   try {
     const result = await prisma.producto_promocion.findMany();
-    Promocion = result.map((producto_promocion) => {
-      // Asegurarse de que createdAt sea una fecha válida o proporcionar un valor predeterminado
-
+    Promocion = result.map((producto_promocion: any): Promocion => {
       return promocionSchema.parse({
         ...producto_promocion,
       });
@@ -52,8 +51,6 @@ export default async function TablaPromociones() {
           <TableHead>Promocion Id</TableHead>
           <TableHead>Imagen</TableHead>
           <TableHead>Acciones</TableHead>
-          
-
         </TableRow>
       </TableHeader>
       <TableBody>
@@ -61,7 +58,6 @@ export default async function TablaPromociones() {
           <TableRow key={producto_promocion.productoPromo_Id}>
             <TableCell className="font-medium">{producto_promocion.producto_Id}</TableCell>
             <TableCell>{producto_promocion.promocion_Id}</TableCell>
-
             <TableCell className="flex gap-3">
               <Link
                 href={`editPromocion/${producto_promocion.productoPromo_Id}/edit`}

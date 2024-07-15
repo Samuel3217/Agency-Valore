@@ -33,7 +33,7 @@ export default async function TablaProductos() {
 
   try {
     const result = await prisma.productos.findMany();
-    productos = result.map((producto): Product => {
+    productos = result.map((producto: any): Product => {
       // Asegurarse de que createdAt sea una fecha válida o proporcionar un valor predeterminado
       const createdAt = producto.createdAt ? new Date(producto.createdAt) : new Date();
       return productSchema.parse({

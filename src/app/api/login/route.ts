@@ -21,9 +21,11 @@ type User = {
 
 export async function POST(req: NextRequest) {
   try {
+    console.log('Inicio de sesión: solicitud recibida');
     const { correo, password } = await req.json();
 
     if (!correo || !password) {
+      console.log('Error: campos incompletos');
       return NextResponse.json({ error: 'Por favor, llena todos los campos' }, { status: 400 });
     }
 
@@ -31,13 +33,16 @@ export async function POST(req: NextRequest) {
     let user: User | null = await prisma.usuarios.findUnique({
       where: { correo: correo },
     });
+    console.log('Usuario encontrado:', user);
 
     // Si no se encuentra en usuarios, buscar en empleados
     if (!user) {
+      console.log('Usuario no encontrado en tabla usuarios, buscando en empleados...');
       const employee = await prisma.empleados.findFirst({
         where: { correo: correo },
       });
 
+      console.log('Empleado encontrado:', employee);
       if (employee) {
         user = {
           correo: employee.correo,
@@ -47,11 +52,13 @@ export async function POST(req: NextRequest) {
       }
     }
 
+    console.log('Usuario final:', user);
     if (user) {
       const isMatch = await bcrypt.compare(password, user.password);
+      console.log('Contraseña comparada:', isMatch);
       if (isMatch) {
         // Generar el token JWT
-         const token = jwt.sign({ correo: user.correo, isEmployee: user.isEmployee }, JWT_SECRET, { expiresIn: '1h' });
+        const token = jwt.sign({ correo: user.correo, isEmployee: user.isEmployee }, JWT_SECRET, { expiresIn: '1h' });
 
         // Configurar la cookie
         const cookie = `authToken=${token}; HttpOnly; Path=/; Max-Age=3600`;
@@ -59,14 +66,17 @@ export async function POST(req: NextRequest) {
         // Redirección basada en el tipo de usuario
         const redirectUrl = user.isEmployee ? '/AdminProductos' : '/';
 
+        console.log('Inicio de sesión exitoso, redireccionando a:', redirectUrl);
         return NextResponse.json({ message: 'Inicio de sesión exitoso', redirect: redirectUrl }, {
           headers: { 'Set-Cookie': cookie }
         });
         
       } else {
+        console.log('Error: contraseña incorrecta');
         return NextResponse.json({ error: 'Contraseña o correo incorrectos' }, { status: 401 });
       }
     } else {
+      console.log('Error: usuario no encontrado');
       return NextResponse.json({ error: 'Contraseña o correo incorrectos' }, { status: 404 });
     }
   } catch (error) {

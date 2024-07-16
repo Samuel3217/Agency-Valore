@@ -11,16 +11,43 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { usuarios } from "@prisma/client";
+import { PrismaClient } from "@prisma/client";
 import { CreateUsuario, UpdateUsuario } from "../AdminUser/userAction"
 
+const prisma = new PrismaClient();
+
+async function main() {
+  const usuarios = await prisma.usuarios.findMany();
+  console.log(usuarios);
+}
+
+main()
+  .catch(e => {
+    throw e;
+  })
+  .finally(async () => {
+    await prisma.$disconnect();
+  });
+
+// Define una interfaz específica para los usuarios
+interface Usuario {
+  usuario_Id: number; // Ajusta según el tipo real de usuario_Id en tu esquema de Prisma
+  nombre: string;
+  usuario: string;
+  correo: string;
+  password: string;
+  direccion: string;
+  birthday: Date;
+  // Agrega otros campos según sea necesario
+}
+
 interface CardWithFormNewProps {
-  usuarios?: usuarios; // Usa el tipo inferido de Prisma
+  usuarios: Usuario | null; // Usa la interfaz definida para usuarios
 }
 
 export function CardWithFormUsuarios({ usuarios }: CardWithFormNewProps) {
   const functionAction = usuarios?.usuario_Id ? UpdateUsuario : CreateUsuario;
-  
+
   return (
     <form action={functionAction} method="post">
       <input type="hidden" name="usuario_Id" value={usuarios?.usuario_Id || ""} />

@@ -22,7 +22,7 @@ const Page = () => {
 
       <div className="grid grid-cols-2 gap-5 mt-10 ml-[250px]">
         <div>
-        <CardWithFormUsuarios/>
+        <CardWithFormUsuarios usuarios={usuarios}/>
         </div>
 
         <div className="">

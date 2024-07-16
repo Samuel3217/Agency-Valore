@@ -46,7 +46,7 @@ export async function POST(req: NextRequest) {
       if (employee) {
         user = {
           correo: employee.correo,
-          password: employee.contrase_a, // Usa el nombre del campo Prisma
+          password: employee.password, // Usa el nombre del campo Prisma
           isEmployee: true,
         };
       }

@@ -49,9 +49,9 @@ model empleados {
   empleado_Id Int    @id @default(autoincrement())
   nombre      String @db.VarChar(150)
   correo      String @db.VarChar(100)
-  contrase_a  String @map("contraseña") @db.VarChar(100)
   imagen      String @db.VarChar(100)
   rol_Id      Int
+  password    String @map("password") @db.VarChar(100)
   roles       roles  @relation(fields: [rol_Id], references: [rol_Id], onDelete: Cascade)
 }
 
@@ -61,7 +61,6 @@ model producto_promocion {
   promocion_Id     Int
   productos        productos   @relation(fields: [producto_Id], references: [producto_Id], onDelete: Cascade)
   promociones      promociones @relation(fields: [promocion_Id], references: [promocion_Id], onDelete: Cascade)
-  
 
   @@unique([producto_Id, promocion_Id])
 }
@@ -107,6 +106,7 @@ model usuarios {
   password   String    @db.VarChar(255)
   direccion  String    @db.VarChar(500)
   birthday   DateTime? @db.Date
+  imagen     String?   @db.VarChar(100)
   ventas     ventas[]
 }
 

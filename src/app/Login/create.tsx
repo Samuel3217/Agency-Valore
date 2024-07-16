@@ -1,3 +1,5 @@
+// src/app/Login/create.tsx
+
 import { Button } from "@/components/ui/button";
 import { ModeToggle } from "@/components/theme-toggle-button";
 import {
@@ -10,11 +12,11 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { usuarios } from "@prisma/client";
+import { usuarios as UsuarioModel } from "@prisma/client"; // Asegúrate de usar el nombre correcto del modelo exportado
 import { CreateUsuario, UpdateUsuario } from "../AdminUser/userAction"
 
 interface CardWithFormNewProps {
-  usuarios?: usuarios;
+  usuarios?: UsuarioModel; // Usa el tipo inferido de Prisma
 }
 
 export function CardWithFormUsuarios({ usuarios }: CardWithFormNewProps) {
@@ -46,7 +48,7 @@ export function CardWithFormUsuarios({ usuarios }: CardWithFormNewProps) {
               <Input
                 name="usuario"
                 id="usuario"
-                placeholder="Algo creativo y unico"
+                placeholder="Algo creativo y único"
                 defaultValue={usuarios?.usuario || ""}
               />
             </div>

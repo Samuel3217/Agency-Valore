@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { usuarios} from "@prisma/client"; // Usar el nombre correcto del modelo exportado
+import { usuarios } from "@prisma/client";
 import { CreateUsuario, UpdateUsuario } from "../AdminUser/userAction"
 
 interface CardWithFormNewProps {

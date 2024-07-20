@@ -39,5 +39,5 @@ export async function middleware(req: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/AdminProductos'], // Añade aquí las rutas que quieres proteger
+  matcher: [], // Añade aquí las rutas que quieres proteger
 };

@@ -47,12 +47,12 @@ export default async function TablaProductos() {
   }
 
   if (!Array.isArray(productos) || !productos.length) {
-    return <div>No products available</div>;
+    return <div>No hay productos dispobibles</div>;
   }
 
   return (
     <Table className="mt-10">
-      <TableCaption>Ofertas disponibles</TableCaption>
+      <TableCaption>productos disponibles</TableCaption>
       <TableHeader>
         <TableRow>
           <TableHead>ID</TableHead>

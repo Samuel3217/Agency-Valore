@@ -11,46 +11,21 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { PrismaClient } from "@prisma/client";
-import { CreateUsuario, UpdateUsuario } from "../AdminUser/userAction"
+import { CreateUsuario, UpdateUsuario } from "../AdminUser/userAction";
+import { Usuario } from "@/types/Usuario";
 
-const prisma = new PrismaClient();
-
-async function main() {
-  const usuarios = await prisma.usuarios.findMany();
-  console.log(usuarios);
+interface CardWithFormUsuariosProps {
+  usuarios: Usuario[];
 }
 
-main()
-  .catch(e => {
-    throw e;
-  })
-  .finally(async () => {
-    await prisma.$disconnect();
-  });
+export function CardWithFormUsuarios({ usuarios }: CardWithFormUsuariosProps) {
+  const usuario = usuarios.length > 0 ? usuarios[0] : null; // Selecciona el primer usuario o ninguno
 
-// Define una interfaz específica para los usuarios
-interface Usuario {
-  usuario_Id: number; // Ajusta según el tipo real de usuario_Id en tu esquema de Prisma
-  nombre: string;
-  usuario: string;
-  correo: string;
-  password: string;
-  direccion: string;
-  birthday: Date;
-  // Agrega otros campos según sea necesario
-}
-
-interface CardWithFormNewProps {
-  usuarios: Usuario | null; // Usa la interfaz definida para usuarios
-}
-
-export function CardWithFormUsuarios({ usuarios }: CardWithFormNewProps) {
-  const functionAction = usuarios?.usuario_Id ? UpdateUsuario : CreateUsuario;
+  const functionAction = usuario?.usuario_Id ? UpdateUsuario : CreateUsuario;
 
   return (
     <form action={functionAction} method="post">
-      <input type="hidden" name="usuario_Id" value={usuarios?.usuario_Id || ""} />
+      <input type="hidden" name="usuario_Id" value={usuario?.usuario_Id || ""} />
       <Card className="w-[350px] relative">
         <CardHeader>
           <CardTitle>Crear Usuario</CardTitle>
@@ -66,7 +41,7 @@ export function CardWithFormUsuarios({ usuarios }: CardWithFormNewProps) {
                 name="nombre"
                 id="nombre"
                 placeholder="Nombre completo"
-                defaultValue={usuarios?.nombre || ""}
+                defaultValue={usuario?.nombre || ""}
               />
             </div>
             <div className="flex flex-col space-y-1.5">
@@ -75,7 +50,7 @@ export function CardWithFormUsuarios({ usuarios }: CardWithFormNewProps) {
                 name="usuario"
                 id="usuario"
                 placeholder="Algo creativo y único"
-                defaultValue={usuarios?.usuario || ""}
+                defaultValue={usuario?.usuario || ""}
               />
             </div>
             <div className="flex flex-col space-y-1.5">
@@ -85,7 +60,7 @@ export function CardWithFormUsuarios({ usuarios }: CardWithFormNewProps) {
                 id="correo"
                 type="email"
                 placeholder="fulano@example.com"
-                defaultValue={usuarios?.correo || ""}
+                defaultValue={usuario?.correo || ""}
               />
             </div>
             <div className="flex flex-col space-y-1.5">
@@ -95,7 +70,7 @@ export function CardWithFormUsuarios({ usuarios }: CardWithFormNewProps) {
                 id="password"
                 type="password"
                 placeholder=""
-                defaultValue={usuarios?.password || ""}
+                defaultValue={usuario?.password || ""}
               />
             </div>
             <div className="flex flex-col space-y-1.5">
@@ -105,7 +80,7 @@ export function CardWithFormUsuarios({ usuarios }: CardWithFormNewProps) {
                 id="direccion"
                 type="text"
                 placeholder="Tu dirección de casa"
-                defaultValue={usuarios?.direccion || ""}
+                defaultValue={usuario?.direccion || ""}
               />
             </div>
             <div className="flex flex-col space-y-1.5">
@@ -114,7 +89,7 @@ export function CardWithFormUsuarios({ usuarios }: CardWithFormNewProps) {
                 name="birthday"
                 id="birthday"
                 type="date"
-                defaultValue={usuarios?.birthday ? new Date(usuarios.birthday).toISOString().split('T')[0] : ""}
+                defaultValue={usuario?.birthday ? new Date(usuario.birthday).toISOString().split('T')[0] : ""}
               />
             </div>
           </div>

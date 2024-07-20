@@ -24,6 +24,7 @@ model categoria_promocion {
   categoriaPromo_Id Int         @id @default(autoincrement())
   categoria_Id      Int
   promocion_Id      Int
+  imagen            String?     @db.VarChar(100)
   categorias        categorias  @relation(fields: [categoria_Id], references: [categoria_Id], onDelete: Cascade)
   promociones       promociones @relation(fields: [promocion_Id], references: [promocion_Id], onDelete: Cascade)
 
@@ -46,19 +47,21 @@ model detallesVenta {
 }
 
 model empleados {
-  empleado_Id Int    @id @default(autoincrement())
-  nombre      String @db.VarChar(150)
-  correo      String @db.VarChar(100)
-  imagen      String @db.VarChar(100)
-  rol_Id      Int
-  password    String @map("password") @db.VarChar(100)
-  roles       roles  @relation(fields: [rol_Id], references: [rol_Id], onDelete: Cascade)
+  empleado_Id    Int       @id @default(autoincrement())
+  nombre         String    @db.VarChar(150)
+  correo         String    @db.VarChar(100)
+  imagen         String    @db.VarChar(100)
+  rol_Id         Int
+  password       String    @map("password") @db.VarChar(100)
+  fecha_registro DateTime? @db.Date
+  roles          roles     @relation(fields: [rol_Id], references: [rol_Id], onDelete: Cascade)
 }
 
 model producto_promocion {
   productoPromo_Id Int         @id @default(autoincrement())
   producto_Id      Int
   promocion_Id     Int
+  imagen           String?     @db.VarChar(100)
   productos        productos   @relation(fields: [producto_Id], references: [producto_Id], onDelete: Cascade)
   promociones      promociones @relation(fields: [promocion_Id], references: [promocion_Id], onDelete: Cascade)
 
@@ -111,13 +114,12 @@ model usuarios {
 }
 
 model ventas {
-  venta_Id     Int        @id @default(autoincrement())
-  usuario_Id   Int?
-  afiliado_Id  Int?
-  tipo_usuario String     @db.VarChar(50)
-  metodo_pago  String     @db.VarChar(50)
-  total        Float
-  fecha        DateTime   @db.Date
-  afiliados    afiliados? @relation(fields: [afiliado_Id], references: [afiliado_Id], onDelete: Cascade)
-  usuarios     usuarios?  @relation(fields: [usuario_Id], references: [usuario_Id], onDelete: Cascade)
+  venta_Id    Int        @id @default(autoincrement())
+  usuario_Id  Int?
+  afiliado_Id Int?
+  total       Float
+  fecha       DateTime?  @default(dbgenerated("'2024-07-18'::date")) @db.Date
+  facturado   Boolean?
+  afiliados   afiliados? @relation(fields: [afiliado_Id], references: [afiliado_Id], onDelete: Cascade)
+  usuarios    usuarios?  @relation(fields: [usuario_Id], references: [usuario_Id], onDelete: Cascade)
 }

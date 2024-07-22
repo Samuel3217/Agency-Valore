@@ -33,6 +33,8 @@ export async function POST(req: NextRequest) {
     });
     console.log('Usuario encontrado:', user);
 
+    let isEmployee = false;
+
     // Si no se encuentra en usuarios, buscar en empleados
     if (!user) {
       console.log('Usuario no encontrado en tabla usuarios, buscando en empleados...');
@@ -45,8 +47,8 @@ export async function POST(req: NextRequest) {
         user = {
           correo: employee.correo,
           password: employee.password, // Usa el nombre del campo Prisma
-          isEmployee: true,
         };
+        isEmployee = true;
       }
     }
 
@@ -56,13 +58,13 @@ export async function POST(req: NextRequest) {
       console.log('Contraseña comparada:', isMatch);
       if (isMatch) {
         // Generar el token JWT
-        const token = jwt.sign({ correo: user.correo, isEmployee: user.isEmployee }, JWT_SECRET, { expiresIn: '1h' });
+        const token = jwt.sign({ correo: user.correo, isEmployee }, JWT_SECRET, { expiresIn: '1h' });
 
         // Configurar la cookie
         const cookie = `authToken=${token}; HttpOnly; Path=/; Max-Age=3600`;
 
         // Redirección basada en el tipo de usuario
-        const redirectUrl = user.isEmployee ? '/AdminProductos' : '/';
+        const redirectUrl = isEmployee ? '/AdminProductos' : '/';
 
         console.log('Inicio de sesión exitoso, redireccionando a:', redirectUrl);
         return NextResponse.json({ message: 'Inicio de sesión exitoso', redirect: redirectUrl }, {

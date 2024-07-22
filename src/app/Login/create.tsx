@@ -24,7 +24,7 @@ export function CardWithFormUsuarios({ usuarios }: CardWithFormUsuariosProps) {
   const functionAction = usuario?.usuario_Id ? UpdateUsuario : CreateUsuario;
 
   return (
-    <form action={functionAction} method="post">
+    <form action={functionAction} method="POST">
       <input type="hidden" name="usuario_Id" value={usuario?.usuario_Id || ""} />
       <Card className="w-[350px] relative">
         <CardHeader>

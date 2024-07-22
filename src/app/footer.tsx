@@ -16,7 +16,11 @@ function Footer() {
         <br />
         <br />
         <div className="flex items-center text-base hover:text-cyan-600">
-          <img src="/images/compromiso.png" className="w-10 mr-2"></img>
+          <Image 
+          alt="Compromiso"
+          width={40}
+          height={20}
+          src="/images/compromiso.png" className="mr-2"></Image>
           <Link href="/Compromiso" passHref>
             Nuestro compromiso
           </Link>
@@ -26,7 +30,11 @@ function Footer() {
         <br />
 
         <div className="flex items-center text-base hover:text-cyan-600">
-          <img src="/images/alianza.png" className="w-10 mr-2"></img>
+          <Image 
+          alt="Convenios"
+          width={40}
+          height={20}
+          src="/images/alianza.png" className=" mr-2"></Image>
           <Link href="/Alianzas" passHref>
         Convenios empresariales
           </Link>
@@ -36,7 +44,11 @@ function Footer() {
         <br />
 
         <div className="flex items-center text-base hover:text-cyan-600">
-          <img src="/images/calendar.png" className="w-10 mr-2"></img>
+          <Image 
+          alt="horarios"
+          width={40}
+          height={20}
+          src="/images/calendar.png" className="w-10 mr-2"></Image>
           <Link href="/Horarios" passHref>
             Horarios
           </Link>

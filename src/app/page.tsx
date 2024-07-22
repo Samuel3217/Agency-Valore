@@ -5,6 +5,7 @@ import { Menu2 }from "./Menu2";
 import Footer from "./footer";
 import BarNew   from "./BarNew";
 import Link from "next/link";
+import Image from "next/image";
 
 
 
@@ -42,8 +43,8 @@ export default async function Page() {
 
         <Menu2 />
       
-      <div className="bg-white h-[130px] w-[1100px] items-center text-5xl text-black flex justify-center ml-[120px]">
-        <img  className=""src="/images/envios.png"></img>
+      <div className="bg-white items-center text-5xl text-black flex justify-center ml-[70px]">
+        <Image  className=""src="/images/envios.png" width={1100} height={20} alt="Envios a toda la republica"></Image>
       </div>
       <br/>
       <Link

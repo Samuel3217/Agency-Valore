@@ -33,9 +33,12 @@ export function Menu2() {
             <ul className="list-none pt-2">
                                 <li className="flex items-center hover:text-blue-600 transition-all duration-300 hover:opacity-100 opacity-80">
                                 
-                                  <img src="/images/facebook.png"
-                                  className="w-8 hover:opacity-80 rounded-full mr-2"
-                                  ></img>
+                                  <Image src="/images/facebook.png"
+                                  alt="facebook"
+                                  width={30}
+                                  height={10}
+                                  className="hover:opacity-80 rounded-full mr-2"
+                                  ></Image>
                                     <Link
                                         href="https://www.facebook.com/rrpp.publicidad"
                                         className="text-sm block"
@@ -47,10 +50,13 @@ export function Menu2() {
                                 <br></br>
                                 <li className="flex items-center hover:text-green-600 transition-all duration-300 hover:opacity-100 opacity-80">
 
-                                  <img
-                                  className="w-8 hover:opacity80 rounded-full mr-2"
+                                  <Image
+                                  className="hover:opacity-80 rounded-3xl mr-2"
                                   src="/images/whatsapp.png"
-                                  ></img>
+                                  alt="whatsapp"
+                                  width={30}
+                                  height={20}
+                                  ></Image>
                                     <Link
                                         href="https://wa.me/5214499800425"
                                         className="text-sm block"
@@ -60,11 +66,14 @@ export function Menu2() {
                                 </li>
                                 <br></br>
                                 <li className="flex items-center hover:text-red-600 transition-all duration-300 hover:opacity-100 opacity-80">
-                                  <img src="/images/gmail.png"
-                                  className="w-8 hover:opacity-80 rounded-full mr-2"
+                                  <Image src="/images/gmail.png"
+                                  className="hover:opacity-80 rounded-full mr-2"
+                                  alt="Gmail"
+                                  width={30}
+                                  height={20}
                                   >
                                     
-                                  </img>
+                                  </Image>
                                     <Link
                                     href="mailto:agencia.valore@gmail.com"
                                     className="text-sm block"
@@ -73,9 +82,12 @@ export function Menu2() {
                                 </li>
                                 <br></br>
                                 <li className="flex items-center hover:text-orange-600 transition-all duration-300 hover:opacity-100 opacity-80">
-                                  <img src="/images/instagram.png"
+                                  <Image src="/images/instagram.png"
                                   className="w-7 hover:opacity-80 mr-2"
-                                  ></img>
+                                  alt="instagram"
+                                  width={30}
+                                  height={20}
+                                  ></Image>
                                   <Link
                                   href="https://www.instagram.com/agencia_valore/"
                                   className="text-sm block"

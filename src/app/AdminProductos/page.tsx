@@ -26,10 +26,10 @@ function page() {
   <TablaPromociones/>
 
   <p className="text-sl text-center mt-10 ">Los siguientes numeros son los que representan los tipos de ofertas que existen en la base de datos, estos deben de ponerse adecuadamente al crear una promocion, asi como el id del producto
-<p className="text-red-600">1: Por cada X te llevas Y</p>
-<p className="text-red-600">2: Con la compra de X tienes Y de descuento</p>
-<p className="text-red-600">3: En el producto X tienes Y de descuento</p>
-  </p>
+</p>
+<p className="text-red-600 text-center mt-5 text-sl">1: Por cada X te llevas Y</p>
+<p className="text-red-600 text-center mt-5 text-sl">2: Con la compra de X tienes Y de descuento</p>
+<p className="text-red-600 text-center mt-5 text-sl">3: En el producto X tienes Y de descuento</p>
 </div>
       <br/>
 

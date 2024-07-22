@@ -29,7 +29,7 @@ export async function POST(req: NextRequest) {
 
     // Buscar en la tabla de usuarios
     let user: User | null = await prisma.usuarios.findUnique({
-      where: { correo: correo },
+      where: { correo },
     });
     console.log('Usuario encontrado:', user);
 
@@ -39,7 +39,7 @@ export async function POST(req: NextRequest) {
     if (!user) {
       console.log('Usuario no encontrado en tabla usuarios, buscando en empleados...');
       const employee = await prisma.empleados.findFirst({
-        where: { correo: correo },
+        where: { correo },
       });
 
       console.log('Empleado encontrado:', employee);

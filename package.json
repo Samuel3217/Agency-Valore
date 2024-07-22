@@ -45,10 +45,10 @@
     "typescript": "^5"
   },
   "scripts": {
-  "dev": "next dev",
-  "postinstall": "prisma migrate deploy",
-  "build": "next build",
-  "start": "next start",
-  "vercel-build": "next build"
-}
+    "dev": "next dev",
+    "postinstall": "prisma migrate deploy",
+    "build": "next build",
+    "start": "next start",
+    "vercel-build": "next build"
+  }
 }

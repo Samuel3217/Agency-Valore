@@ -1,5 +1,3 @@
-// api/login/route.ts
-
 import { NextRequest, NextResponse } from 'next/server';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';

@@ -25,7 +25,7 @@ export default function Barra() {
 
     <Link className="transition-all duration-300 text-xl font-sans py-4 px-6 rounded ml-[200px] text-center mx-auto relative overflow-hidden group hover:text-cyan-500"
     type="button"
-    href="/ofertas"
+    href="/Ofertas"
     >
    Ofertas
 </Link>

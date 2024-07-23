@@ -6,6 +6,8 @@ import Footer from "./footer";
 import BarNew   from "./BarNew";
 import Link from "next/link";
 import Image from "next/image";
+import Head from 'next/head';
+import BarOfertas from "./BarOfertas";
 
 
 
@@ -22,6 +24,12 @@ export default async function Page() {
 
   return (
     <div className="flex-justify items-center">
+
+<Head>
+        <title>Agencia Valore</title>
+        <meta name="description" content="Bienvenido a Agencia Valore" />
+        <link rel="icon" href="/favicon.ico"/>
+      </Head>
 
 <div className="mt-2 ml-2 w-[1325px]">
       <Barra />
@@ -55,7 +63,7 @@ export default async function Page() {
       </Link>
 
       <div className="mt-10 ml-[50px] shadow-lg p-4 bg-gray-200 w-[1255px] rounded-lg">
-
+        <BarOfertas Limit={2}/>
       </div>
       <br/>
 

@@ -9,9 +9,9 @@ import UsuariosServer from './UsuariosServer';
 
 const Page = () => {
   return (
-    <div className="container mx-auto p-4">
-      <div className="mt-[-20px]">
-        <Barra />
+    <div className="">
+      <div className="mt-2 ml-2 w-[1325px]">
+      <Barra />
       </div>
       <Menu2 />
 

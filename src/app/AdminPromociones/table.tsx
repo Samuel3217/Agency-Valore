@@ -19,6 +19,7 @@ const promocionSchema = z.object({
   productoPromo_Id: z.number(),
   producto_Id: z.number(),
   promocion_Id: z.number(),
+  imagen: z.string(),
 });
 
 type Promocion = z.infer<typeof promocionSchema>;
@@ -58,6 +59,7 @@ export default async function TablaPromociones() {
           <TableRow key={producto_promocion.productoPromo_Id}>
             <TableCell className="font-medium">{producto_promocion.producto_Id}</TableCell>
             <TableCell>{producto_promocion.promocion_Id}</TableCell>
+            <TableCell>{producto_promocion.imagen}</TableCell>
             <TableCell className="flex gap-3">
               <Link
                 href={`editPromocion/${producto_promocion.productoPromo_Id}/edit`}

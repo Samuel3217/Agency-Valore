@@ -11,19 +11,19 @@ export default async function edit({params}: {
     console.log({params})
 
 
-    const nuevos = await prisma.producto_promocion.findFirst({
+    const oferta = await prisma.producto_promocion.findFirst({
         where: {
             productoPromo_Id: parseInt(params.productoPromo_Id)
         }
     })
 
-    if(!nuevos) {
-        redirect("/AdminPromociones")
+    if(!oferta) {
+        redirect("/AdminProductos")
     }   
 
     return(
         <div className="ml-[500px]">
-            <CardWithFormPromocion/>
+            <CardWithFormPromocion promocion={oferta}/>
         </div>
 
     )

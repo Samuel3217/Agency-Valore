@@ -1,3 +1,5 @@
+// src/app/AdminPromociones/CardWithFormPromocion.tsx
+
 import { Button } from "@/components/ui/button";
 import { ModeToggle } from "@/components/theme-toggle-button";
 import {
@@ -27,13 +29,16 @@ export function CardWithFormPromocion({ promocion }: CardWithFormNewProps) {
           <div className="flex justify-between absolute top-0 right-0">
             <ModeToggle />
           </div>
-          <CardTitle>Agregar producto</CardTitle>
+          <CardTitle>{promocion?.productoPromo_Id ? "Actualizar Promoción" : "Agregar Promoción"}</CardTitle>
           <CardDescription>
-            Aquí puedes agregar o modificar cualquier cosa en la página web!!
+            {promocion?.productoPromo_Id ? "Actualiza los datos de la promoción" : "Agrega una nueva promoción"}
           </CardDescription>
         </CardHeader>
         <CardContent>
           <div className="grid w-full items-center gap-4">
+            {promocion && (
+              <input type="hidden" name="productoPromo_Id" value={promocion.productoPromo_Id} />
+            )}
             <div className="flex flex-col space-y-1.5">
               <Label htmlFor="producto_Id">ID Producto</Label>
               <Input
@@ -66,7 +71,7 @@ export function CardWithFormPromocion({ promocion }: CardWithFormNewProps) {
           </div>
         </CardContent>
         <CardFooter className="flex justify-between">
-          <Button variant="outline">Cancel</Button>
+          <Button variant="outline">Cancelar</Button>
           <Button type="submit">
             {promocion?.productoPromo_Id ? "Actualizar promoción" : "Crear promoción"}
           </Button>

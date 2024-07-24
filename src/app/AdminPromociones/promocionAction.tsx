@@ -79,6 +79,7 @@ export async function CreatePromocion(formData: FormData) {
 export async function DeletePromocion(formData: FormData) {
   const promocion_IdStr = formData.get("productoPromo_Id")?.toString();
   if (!promocion_IdStr) {
+    console.error("Promoción ID is missing");
     return;
   }
 
@@ -89,12 +90,18 @@ export async function DeletePromocion(formData: FormData) {
     return;
   }
 
-  await prisma.producto_promocion.delete({
-    where: {
-      productoPromo_Id: productoPromo_Id,
-    },
-  });
+  try {
+    await prisma.producto_promocion.delete({
+      where: {
+        productoPromo_Id: productoPromo_Id,
+      },
+    });
+  } catch (error) {
+    console.error("Error deleting promoción:", error);
+  }
+  redirect("/AdminProductos");
 }
+
 
 export async function UpdatePromocion(formData: FormData) {
   const productoPromo_IdStr = formData.get("productoPromo_Id")?.toString();

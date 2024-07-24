@@ -68,7 +68,7 @@ export default async function TablaPromociones() {
                 Editar
               </Link>
               <form action={DeletePromocion}>
-                <input type="hidden" name="promocion_Id" value={producto_promocion.productoPromo_Id} />
+                <input type="hidden" name="productoPromo_Id" value={producto_promocion.productoPromo_Id} />
                 <Button variant="destructive">Delete</Button>
               </form>
             </TableCell>

@@ -30,7 +30,7 @@ async function BarNew({ Limit }: BarnewProps): Promise<JSX.Element> {
         <Card key={producto.producto_Id}>
           <CardHeader>{producto.nombre}</CardHeader>
           <CardContent>
-            <Image height={120} width={120} className="h-32 hover:h-36 transition-all duration-300 opacity-80 hover:opacity-100 ml-7" src={producto.imagen ?? ''} alt={producto.nombre} />
+            <Image height={120} width={120} className="h-32 hover:w-[130px] hover:h-36 transition-all duration-300 opacity-80 hover:opacity-100 ml-7" src={producto.imagen ?? ''} alt={producto.nombre} />
             <p className="mt-4 text-xl">{producto.precio}</p>
             <p>{producto.descripcion}</p>
             <p className='text-sm'>Cantidad: {producto.stock}</p>

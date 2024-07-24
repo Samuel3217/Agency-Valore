@@ -15,23 +15,20 @@ import { CreateUsuario, UpdateUsuario } from "../AdminUser/userAction";
 import { Usuario } from "@/types/Usuario";
 
 interface CardWithFormUsuariosProps {
-  usuario?: Usuario; // Cambiar a usuario singular
+  usuario?: Usuario; // Usuario opcional
 }
 
 export function CardWithFormUsuarios({ usuario }: CardWithFormUsuariosProps) {
-  // Determinar si estamos en modo de creación o actualización
-  const isEditMode = usuario && usuario.usuario_Id;
-
-  const functionAction = isEditMode ? UpdateUsuario : CreateUsuario;
+  const functionAction = usuario?.usuario_Id ? UpdateUsuario : CreateUsuario;
 
   return (
     <form action={functionAction} method="post">
       <input type="hidden" name="usuario_Id" value={usuario?.usuario_Id || ""} />
       <Card className="w-[350px] relative">
         <CardHeader>
-          <CardTitle>{isEditMode ? "Actualizar Usuario" : "Crear Usuario"}</CardTitle>
+          <CardTitle>{usuario?.usuario_Id ? "Actualizar Usuario" : "Crear Usuario"}</CardTitle>
           <CardDescription>
-            {isEditMode ? "Actualiza los datos del usuario" : "Ingresa los datos correspondientes"}
+            {usuario?.usuario_Id ? "Actualiza los datos del usuario" : "Ingresa los datos correspondientes"}
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -97,7 +94,7 @@ export function CardWithFormUsuarios({ usuario }: CardWithFormUsuariosProps) {
         </CardContent>
         <CardFooter className="flex justify-between">
           <Button variant="outline">Cancelar</Button>
-          <Button type="submit">{isEditMode ? "Actualizar cuenta" : "Crear cuenta"}</Button>
+          <Button type="submit">{usuario?.usuario_Id ? "Actualizar cuenta" : "Crear cuenta"}</Button>
         </CardFooter>
       </Card>
     </form>

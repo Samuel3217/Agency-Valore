@@ -73,6 +73,8 @@ export async function CreatePromocion(formData: FormData) {
       // No lanzar excepción después de redirect
     }
   }
+
+  redirect("/")
 }
 
 

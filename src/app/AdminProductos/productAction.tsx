@@ -66,6 +66,8 @@ export async function DeleteProduct(formData: FormData) {
       producto_Id: producto_Id,
     },
   });
+
+  redirect("/AdminProductos")
 }
 
 export async function UpdateProduct(formData: FormData) {
@@ -104,5 +106,5 @@ export async function UpdateProduct(formData: FormData) {
     },
   });
 
-  redirect("/AdminProductos");
+  redirect("/");
 }

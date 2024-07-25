@@ -45,8 +45,8 @@ function page() {
 
         <div className='shadow-lg w-[240px]'>
           <Image
-          src="/images/farmaprecio.jpg"
-          alt="farmaprecio"
+          src="/images/girasol.jpg"
+          alt="Girasol"
           width={300}
           height={30}
           ></Image>

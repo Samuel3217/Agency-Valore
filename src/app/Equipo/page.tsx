@@ -14,7 +14,7 @@ function page() {
       <div>
         <h1 className="text-3xl font-bold hover:text-cyan-500 transition-all duration-300 text-center mt-10"
         >Nuestro equipo.</h1>
-        <h2 className="text-2xl font-bold text-black text-center mt-5">Nuestra gran y unida familia.</h2>
+        <h2 className="text-2xl italic text-black text-center mt-5">Nuestro equipo especializado y profecional.</h2>
       </div>
 
       <div className="grid grid-cols-5 gap-5 mt-10">
@@ -24,11 +24,11 @@ function page() {
           alt="Equipo de diseño"
           width={200}
           height={30}
-          className="ml-5 rounded-full"
+          className="ml-5 rounded-full border-4 border-black "
           ></Image>
           <p
-          className="text-center bg-gray-300 h-8 text-2xl ml-8 w-[204px] text-red-600 mt-8"
-          >Equipo de diseño</p>
+          className="text-center h-8 text-2xl ml-8 w-[204px] mt-8"
+          >Diseño grafico</p>
         </div>
 
         <div>
@@ -37,10 +37,10 @@ function page() {
           alt="Recursos humanos"
           width={220}
           height={30}
-          className=" ml-5 rounded-full"
+          className=" ml-5 rounded-full border-4 border-black"
           ></Image>
           <p 
-          className="text-center bg-blue-800 text-2xl ml-7 w-[220px] text-white mt-6"
+          className="text-center text-2xl ml-7 w-[220px] mt-6"
           >Recursos humanos</p>
         </div>
 
@@ -50,10 +50,10 @@ function page() {
           alt="Equipo de administracion"
           width={200}
           height={30}
-          className="ml-5 rounded-full"
+          className="ml-5 rounded-full border-4 border-black"
           ></Image>
           <p
-          className="text-center bg-orange-200 text-2xl ml-7 w-[200px] mt-3 text-black"
+          className="text-center text-2xl ml-7 w-[200px] mt-3"
           >Administracion</p>
         </div>
 
@@ -63,10 +63,10 @@ function page() {
           alt="Equipo de marketing digital"
           width={200}
           height={30}
-          className="ml-5 rounded-full"
+          className="ml-5 rounded-full border-4 border-black"
           ></Image>
           <p
-          className="text-center bg-cyan-400 text-2xl ml-7 w-[200px] mt-6 text-black"
+          className="text-center text-2xl ml-7 w-[200px] mt-6"
           >Marketing digital</p>
         </div>
 
@@ -76,10 +76,10 @@ function page() {
           alt="Equipo de desarrollo web"
           width={230}
           height={30}
-          className="ml-2 rounded-full"
+          className="ml-2 rounded-full border-4 border-black"
           ></Image>
           <p
-          className="text-center bg-black text-2xl ml-7 w-[200px] mt-3 text-green-500"
+          className="text-center text-2xl ml-7 w-[200px] mt-3"
           >Desarrollo web</p>
         </div>
       </div>
@@ -92,7 +92,7 @@ function page() {
           alt="Equipo de imprenta"
           width={190}
           height={30}
-          className="ml-5 rounded-full"
+          className="ml-5 rounded-full border-4 border-black"
           ></Image>
           <p
           className="text-center bg-white h-8 text-2xl ml-7 w-[204px] text-black mt-5"
@@ -105,10 +105,10 @@ function page() {
           alt="capacitadores"
           width={220}
           height={30}
-          className=" ml-5 rounded-full"
+          className=" ml-5 rounded-full border-4 border-black"
           ></Image>
           <p 
-          className="text-center bg-black text-2xl ml-7 w-[220px] text-white mt-6"
+          className="text-center text-2xl ml-7 w-[220px] mt-6"
           >Capacitadores</p>
         </div>
 
@@ -118,10 +118,10 @@ function page() {
           alt="Equipo de mercadotecnia"
           width={240}
           height={30}
-          className="ml-5 rounded-full"
+          className="ml-5 rounded-full border-4 border-black"
           ></Image>
           <p
-          className="text-center bg-violet-800 text-2xl ml-12 w-[200px] mt-7 text-yellow-400"
+          className="text-center text-2xl ml-12 w-[200px] mt-7 "
           >Mercadotecnia</p>
         </div>
 
@@ -131,10 +131,10 @@ function page() {
           alt="Equipo de relaciones publicas"
           width={250}
           height={30}
-          className="ml-5 rounded-full"
+          className="ml-5 rounded-full border-4 border-black"
           ></Image>
           <p
-          className="text-center bg-red-400 text-2xl ml-12 w-[230px] mt-4 text-black"
+          className="text-center text-2xl ml-12 w-[230px] mt-4"
           >Relaciones publicas</p>
         </div>
 

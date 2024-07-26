@@ -29,7 +29,7 @@ async function BarOfertas({ Limit }: BarnOfertaProps): Promise<JSX.Element> {
       {producto_promocion.map((producto_promocion: any) => (
         <Card key={producto_promocion.productoPromo_Id}>
           <CardContent className='w-[500px] h-[440px]'>
-            <Image height={300} width={400} className="transition-all duration-300 opacity-80 hover:opacity-100 ml-12 mt-10 items-center" src={producto_promocion.imagen ?? ''} alt={producto_promocion.producto_Id} />
+            <Image height={300} width={400} className="transition-all duration-300 opacity-80 hover:opacity-100 ml-20 mt-10 items-center" src={producto_promocion.imagen ?? ''} alt={producto_promocion.producto_Id} />
           </CardContent>
         </Card>
       ))}

@@ -14,7 +14,7 @@ function page() {
       <h1 className="text-center mt-5 text-3xl text-black hover:text-cyan-700 transition-all duration-300">Nuevos</h1>
 
       <div className="mt-10 ml-[-10px] w-[1350px]">
-            <BarOfertas/>
+            <BarOfertas Limit={30}/>
         </div>
 
         <Menu2/>

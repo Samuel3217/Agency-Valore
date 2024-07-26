@@ -20,7 +20,7 @@ const Page = () => {
       </h1>
 
       <h3 className="text-center text-red-800">
-        Los correos serán usados para fines de mandar recordatorios y seguimiento de pedidos
+        Los correos serán usados para fines promocionales y seguimiento de pedidos
       </h3>
       <h3 className="text-center text-red-500">Y NADA MÁS</h3>
 

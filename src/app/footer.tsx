@@ -62,10 +62,19 @@ function Footer() {
           alt="equipo de trabajo"
           width={40}
           height={50}
-          className="w-10 mr-2"
+          className=" mr-2"
           ></Image>
           <Link href="/Equipo">Nuestro equipo</Link>
         </div>
+      </div>
+      <div>
+        <Image
+        src=""
+        alt="Codigo QR"
+        width={500}
+        height={500}
+        className=""
+        />
       </div>
     </div>
   );

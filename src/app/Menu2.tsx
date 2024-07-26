@@ -24,8 +24,8 @@ export function Menu2() {
         <div className="flex justify-between space-x-4">
          
           <div className="space-y-1">
-            <h4 className="text-1xl font-semibold">Valore</h4>
-            <p className="text-sm">
+            <h4 className="text-1xl font-semibold text-center">Valore</h4>
+            <p className="text-sm border-b border-gray-300 w-[300px] text-center">
               Puedes contactarnos mediante:
             </p>
             <div className="items-center pt-2">

@@ -64,7 +64,8 @@ export default function Barra() {
             </Link>
           </div>
         </HoverCardTrigger>
-        <HoverCardContent className="ml-44 text-sm text-gray-800">
+        <HoverCardContent className="ml-44 text-xs text-gray-800 text-center">
+          <h1 className="text-sm text-black border-b border-gray-300 w-[230px] text-center">Crear o iniciar sesion</h1>
           Registrate para recibir promociones y poder brindarte seguimiento de pedidos
         </HoverCardContent>
       </HoverCard>

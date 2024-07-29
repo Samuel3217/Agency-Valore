@@ -1,8 +1,9 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
-import jwt from 'jsonwebtoken';
+import { jwtVerify } from 'jose';
 
 const JWT_SECRET = process.env.JWT_SECRET || 'your_secret_key';
+const secret = new TextEncoder().encode(JWT_SECRET);
 
 export async function middleware(req: NextRequest) {
   const token = req.cookies.get('authToken')?.value; // Obtener el valor del token de la cookie
@@ -16,16 +17,17 @@ export async function middleware(req: NextRequest) {
   try {
     console.log('Tipo de token:', typeof token); // Verificar el tipo de token
 
-    // Decodificar el token sin verificarlo
-    const decodedToken = jwt.decode(token) as { correo: string, isEmployee?: boolean };
+    // Verificar y decodificar el token usando jose
+    const { payload } = await jwtVerify(token, secret);
 
-    console.log('Token decodificado:', decodedToken); // Log para verificar el token decodificado
+    console.log('Token verificado y decodificado:', payload); // Log para verificar el token decodificado
+
+    const decodedToken = payload as { correo: string, isEmployee?: boolean };
 
     // Aquí se puede agregar una verificación adicional según sea necesario
-    
     const currentPath = req.nextUrl.pathname;
 
-    if (decodedToken?.isEmployee && currentPath !== '/AdminProductos') {
+    if (decodedToken.isEmployee && currentPath !== '/AdminProductos') {
       // Si es empleado y no está en la página de administración, redirigir a la página de administración
       return NextResponse.redirect(new URL('/AdminProductos', req.url));
     }

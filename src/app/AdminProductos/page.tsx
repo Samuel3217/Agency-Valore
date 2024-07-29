@@ -7,7 +7,7 @@ function page() {
     <div>
 
 <div>
-    <Link href="/" className="text-2xl ml-5 hover:text-blue-600 transition-all duration-300">Home</Link>
+    <Link href="/" className=" mt-10 text-2xl ml-5 hover:text-blue-600 transition-all duration-300">Home</Link>
       </div>
     <div className="grid grid-cols-2 gap-10">
 
@@ -21,7 +21,7 @@ function page() {
 
       
 
-      <div className="mt-7">
+      <div className="">
         <Link href="/nuevaPromocion" className=" w-[100px] h-[30px] ml-[260px] rounded-xl mt-[-10px]  hover:bg-gray-200 transition-all duration-200 hover:text-green-600 text-lg">Agregar</Link>
   <TablaPromociones/>
 

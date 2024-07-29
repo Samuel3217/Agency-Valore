@@ -51,7 +51,9 @@ export default async function TablaProductos() {
   }
 
   return (
-    <Table className="mt-10">
+    <div>    
+      <h1 className="mt-5 ml-[230px] text-xl font-bold">Productos</h1>
+      <Table className="mt-10">
       <TableCaption>productos disponibles</TableCaption>
       <TableHeader>
         <TableRow>
@@ -91,5 +93,7 @@ export default async function TablaProductos() {
         ))}
       </TableBody>
     </Table>
+    </div>
+
   );
 }

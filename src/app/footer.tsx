@@ -69,11 +69,11 @@ function Footer() {
       </div>
       <div>
         <Image
-        src=""
+        src="/images/qr.jpg"
         alt="Codigo QR"
-        width={500}
-        height={500}
-        className=""
+        width={250}
+        height={400}
+        className="mt-8"
         />
       </div>
     </div>

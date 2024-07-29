@@ -44,6 +44,8 @@ export default async function TablaPromociones() {
   }
 
   return (
+    <div>
+      <h1 className="mt-5 ml-[230px] text-xl font-bold">Promociones</h1>
     <Table className="mt-10">
       <TableCaption>Promociones disponibles</TableCaption>
       <TableHeader>
@@ -76,5 +78,6 @@ export default async function TablaPromociones() {
         ))}
       </TableBody>
     </Table>
+    </div>
   );
 }

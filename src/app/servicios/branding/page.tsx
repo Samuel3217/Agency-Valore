@@ -4,9 +4,17 @@ import Footer from "@/app/footer";
 import Carousel from "@/app/Carousel";
 
 function page() {
-
-  const branding = [
-    ""
+  const branding = ["/images/branding1.jpg",
+    "/images/branding2.jpg",
+    "/images/branding3.jpg",
+    "/images/branding4.jpg",
+    "/images/branding5.png",
+    "/images/branding6.png",
+    "/images/branding7.png",
+    "/images/branding8.png",
+    "/images/branding9.png",
+    "/images/branding10.png",
+    "/images/branding11.png",
   ];
 
   return (
@@ -20,18 +28,17 @@ function page() {
       </h1>
 
       <div className="grid grid-cols-2 mt-10 ml-20">
-        
-      <Carousel images={branding} width={300} height={400}/>
+        <Carousel images={branding} width={300} height={400} />
 
-      <p className="text-2xl mt-[200px] text-justify ml-[-100px] w-[700px]">
-        Somos tu equipo de profesionales creativos. Trabajamos en conjunto para
-        ayudar a las empresas, freelance; para que todos nuestros clientesa
-        alcancen sus objetivos comerciales y/o de comunicación, mediante
-        estrategias de marketing visual y comunicación efectiva.
-      </p>
+        <p className="text-2xl mt-[200px] text-justify ml-[-100px] w-[700px]">
+          Somos tu equipo de profesionales creativos. Trabajamos en conjunto
+          para ayudar a las empresas y freelance. Nuestro objetivo es que todos
+          nuestros clientes alcancen sus objetivos comerciales y/o de
+          comunicación, mediante estrategias de marketing visual y comunicación
+          efectiva.
+        </p>
       </div>
 
-    
       <Menu2 />
       <Footer />
     </div>

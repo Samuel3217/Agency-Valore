@@ -38,10 +38,10 @@ const components: { title: string; href: string; description: string }[] = [
   {
     title: "Estrategia y gestión empresarial",
     href: "/servicios/estrategia",
-    description: "Planeamos tu camino hacia un exito asegurado.",
+    description: "Planeamos tu camino hacia un éxito asegurado.",
   },
   {
-    title: "¿Buscas algo mas?",
+    title: "¿Buscas algo más?",
     href: "https://www.google.com.mx/maps/place/Agencia+Valore/@21.9072379,-102.2804263,17z/data=!3m1!4b1!4m6!3m5!1s0x8429ef73f5afeb9f:0x4aa07056238f3e51!8m2!3d21.9072329!4d-102.2778514!16s%2Fg%2F11tfh7nphr?entry=ttu",
     description: "Tengamos una cita, ¿te parece bien?.",
   },

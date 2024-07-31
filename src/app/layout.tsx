@@ -24,14 +24,13 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // Proporciona valores predeterminados si son null o undefined
   const title: string =
     typeof metadata.title === "string" ? metadata.title : "Agencia Valore";
   const description: string =
     typeof metadata.description === "string"
       ? metadata.description
       : "Bienvenido a Agencia Valore";
-
+      
   return (
     <html lang="es" suppressHydrationWarning>
       <Head>
@@ -43,29 +42,17 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap"
           rel="stylesheet"
         />
-
         <link
           href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
           rel="stylesheet"
         />
-
         <link
           href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap"
           rel="stylesheet"
         />
       </Head>
-      <body
-        className={cn(
-          "min-h-screen bg-background font-sans antialiased",
-          fontSans.variable
-        )}
-      >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="light"
-          enableSystem
-          disableTransitionOnChange
-        >
+      <body className={cn("min-h-screen bg-background font-sans antialiased", fontSans.variable)}>
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
           {children}
         </ThemeProvider>
       </body>

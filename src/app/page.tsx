@@ -57,7 +57,7 @@ export default async function Page() {
       <br/>
       <Link
       className="items center text-3xl font-sans ml-[625px] hover:text-cyan-700 transition-all duration-300 m"
-      href="/ofertas"
+      href="/Ofertas"
       >
         ¡¡Ofertas!!
       </Link>

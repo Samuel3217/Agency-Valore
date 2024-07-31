@@ -47,8 +47,9 @@ function page() {
           <Image
           src="/images/girasol.jpg"
           alt="Girasol"
-          width={300}
+          width={200}
           height={30}
+          className='mt-[-70px]'
           ></Image>
 
         </div>

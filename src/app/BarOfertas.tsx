@@ -51,16 +51,23 @@ const BarOfertas: React.FC<BarOfertasProps> = ({ productos = [], Limit }) => {
   if (error) return <p>Error: {error}</p>;
 
   return (
-    <div className="grid grid-cols-2 gap-4 overflow-hidden">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 overflow-hidden">
       {productList.map((producto_promocion: ProductoPromocion) => (
-        <Card key={producto_promocion.productoPromo_Id}>
-          <CardContent className='w-[500px] h-[440px]'>
-            <Image height={300} width={400} className="transition-all duration-300 opacity-80 hover:opacity-100 ml-20 mt-10 items-center" src={producto_promocion.imagen ?? '/default-image.jpg'} alt={`Producto ${producto_promocion.producto_Id}`} />
+        <Card key={producto_promocion.productoPromo_Id} className="flex flex-col items-center">
+          <CardContent className='w-full md:w-[500px] h-[440px] flex items-center justify-center'>
+            <Image 
+              height={300} 
+              width={400} 
+              className="transition-all duration-300 opacity-80 hover:opacity-100" 
+              src={producto_promocion.imagen ?? '/default-image.jpg'} 
+              alt={`Producto ${producto_promocion.producto_Id}`} 
+            />
           </CardContent>
         </Card>
       ))}
     </div>
   );
+  
 };
 
 export default BarOfertas;

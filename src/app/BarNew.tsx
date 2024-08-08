@@ -42,20 +42,27 @@ const BarNew: React.FC<BarnewProps> = ({ Limit }) => {
   }
 
   return (
-    <div className="grid grid-cols-5 gap-4 overflow-hidden">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 overflow-hidden">
       {productos.map((producto: any) => (
-        <Card key={producto.producto_Id}>
-          <CardHeader>{producto.nombre}</CardHeader>
-          <CardContent>
-            <Image height={120} width={120} className="h-32 hover:w-[130px] hover:h-36 transition-all duration-300 opacity-80 hover:opacity-100 ml-7" src={producto.imagen ?? ''} alt={producto.nombre} />
-            <p className="mt-4 text-xl">{producto.precio}</p>
-            <p>{producto.descripcion}</p>
-            <p className='text-sm'>Cantidad: {producto.stock}</p>
+        <Card key={producto.producto_Id} className="flex flex-col items-center max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg p-4 sm:p-5 md:p-6 lg:p-7">
+          <CardHeader className="text-center text-sm sm:text-base md:text-lg lg:text-xl">{producto.nombre}</CardHeader>
+          <CardContent className="flex flex-col items-center w-full">
+            <Image 
+              height={100} 
+              width={100} 
+              className="h-24 w-24 hover:w-[110px] hover:h-28 transition-all duration-300 opacity-80 hover:opacity-100" 
+              src={producto.imagen ?? ''} 
+              alt={producto.nombre} 
+            />
+            <p className="mt-2 text-xs sm:text-sm md:text-base lg:text-lg">{producto.precio}</p>
+            <p className="text-xs sm:text-sm md:text-base lg:text-lg">{producto.descripcion}</p>
+            <p className="text-xs sm:text-sm md:text-base lg:text-lg">Cantidad: {producto.stock}</p>
           </CardContent>
         </Card>
       ))}
     </div>
   );
+  
 };
 
 export default BarNew;

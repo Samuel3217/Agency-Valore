@@ -1,4 +1,3 @@
-
 import Carousel from "./Carousel";
 import Barra from "./bar";
 import { Menu2 } from "./Menu2";
@@ -17,63 +16,57 @@ export default function Page() {
   ];
 
   return (
-    <div className="flex-justify items-center">
+    <div className="flex flex-col items-center px-4 sm:px-6 lg:px-8">
       <Head>
         <title>Agencia Valore</title>
         <meta name="description" content="Bienvenido a Agencia Valore" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="mt-2 ml-2 w-[1325px]">
+      <div className="">
         <Barra />
       </div>
-      <br/>
 
-      <h1 className="h-10 w-[100px] ml-[545px] transition-all duration-300 font-light text-5xl text-center mt-4 font-sans hover:text-cyan-700">
+      <h1 className="text-3xl sm:text-4xl lg:text-5xl font-light text-center mt-4 transition-all duration-300 hover:text-cyan-700">
         Bienvenidos
       </h1>
 
-      <div className="bg-gray-250 font-light text-sm w-96 mt-10 text-center ml-auto mr-auto">
-        A tu agencia, nos especializamos en: Publicidad, Marketing y Relaciones públicas 
-        <div className="bg-gray-500">
-        <Carousel images={images} width={400} height={400}/>
+      <div className="bg-gray-250 font-light text-sm w-full max-w-screen-md text-center mt-10 mx-auto p-4">
+        A tu agencia, nos especializamos en: Publicidad, Marketing y Relaciones públicas
+        <div className=" mt-4 overflow-hidden lg:ml-44 sm:ml-24">
+          <Carousel images={images} width={400} height={400} />
         </div>
-        <br />
       </div>
-      <br />
 
       <Menu2 />
-      
-      <div className="bg-white items-center text-5xl text-black flex justify-center ml-[70px]">
+
+      <div className="bg-white text-black flex justify-center mt-8 px-4">
         <Image src="/images/envios.png" width={1100} height={20} alt="Envios a toda la republica" />
       </div>
-      <br/>
+
       <Link
-        className="items-center text-3xl font-sans ml-[625px] hover:text-cyan-700 transition-all duration-300"
+        className="text-2xl sm:text-3xl font-sans mt-8 hover:text-cyan-700 transition-all duration-300 mx-auto"
         href="/Ofertas"
       >
         ¡¡Ofertas!!
       </Link>
 
-      <div className="mt-10 ml-[50px] shadow-lg p-4 bg-gray-200 w-[1255px] rounded-lg">
-        <BarOfertas Limit={2}/>
-      </div>
-      <br/>
-
-      <div>
-        <Link
-          className="items-center text-3xl font-sans ml-[625px] mt-10 hover:text-cyan-700 transition-all duration-300"
-          href="/Nuevos"
-        >
-          ¡¡Nuevos!!
-        </Link>
+      <div className="mt-10 w-full max-w-screen-lg mx-auto shadow-lg p-4 bg-gray-200 rounded-lg">
+        <BarOfertas Limit={2} />
       </div>
 
-      <div className="mt-10 ml-[45px] shadow-lg p-4 bg-gray-200 w-[1255px] rounded-lg">
-        <BarNew Limit={5}/>
+      <Link
+        className="text-2xl sm:text-3xl font-sans mt-8 hover:text-cyan-700 transition-all duration-300 mx-auto"
+        href="/Nuevos"
+      >
+        ¡¡Nuevos!!
+      </Link>
+
+      <div className="mt-10 w-full max-w-screen-lg mx-auto shadow-lg p-4 bg-gray-200 rounded-lg">
+        <BarNew Limit={5} />
       </div>
 
-      <Footer />
+      <Footer  />
     </div>
   );
 }

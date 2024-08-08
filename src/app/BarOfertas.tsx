@@ -1,39 +1,66 @@
+"use client";
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Card, CardContent } from "@/components/ui/card";
-import prisma from "@/lib/prisma";
 import Image from 'next/image';
 
-interface BarnOfertaProps {
+interface BarOfertasProps {
+  productos?: any[];
   Limit?: number;
 }
 
-async function BarOfertas({ Limit }: BarnOfertaProps): Promise<JSX.Element> {
+interface ProductoPromocion {
+  productoPromo_Id: string;
+  imagen?: string;
+  producto_Id: string;
+}
 
-    const takeValue = Limit ? parseInt(Limit.toString()) : undefined;
+const BarOfertas: React.FC<BarOfertasProps> = ({ productos = [], Limit }) => {
+  const [productList, setProductList] = useState<ProductoPromocion[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
-  const producto_promocion = await prisma.producto_promocion.findMany({
-    take: takeValue,
-    orderBy: { productoPromo_Id: 'desc' }
-  });
+  const fetchProductoPromocion = async () => {
+    setLoading(true);
+    try {
+      const response = await fetch(`/api/offers?limit=${Limit}`);
+      if (!response.ok) {
+        throw new Error('Error fetching producto_promocion');
+      }
+      const data = await response.json();
+      setProductList(data);
+    } catch (error) {
+      setError((error as Error).message);
+    } finally {
+      setLoading(false);
+    }
+  };
 
-  console.log(producto_promocion);
+  useEffect(() => {
+    fetchProductoPromocion();
+  }, [Limit]);
 
-  if (!producto_promocion.length) {
-    return <p>No hay productos disponibles.</p>;
-  }
+  useEffect(() => {
+    // Solo actualiza productList si productos cambia
+    if (productos.length > 0) {
+      setProductList(productos);
+    }
+  }, [productos]);
+
+  if (loading) return <p>Cargando ofertas...</p>;
+  if (error) return <p>Error: {error}</p>;
 
   return (
     <div className="grid grid-cols-2 gap-4 overflow-hidden">
-      {producto_promocion.map((producto_promocion: any) => (
+      {productList.map((producto_promocion: ProductoPromocion) => (
         <Card key={producto_promocion.productoPromo_Id}>
           <CardContent className='w-[500px] h-[440px]'>
-            <Image height={300} width={400} className="transition-all duration-300 opacity-80 hover:opacity-100 ml-20 mt-10 items-center" src={producto_promocion.imagen ?? '/default-image.jpg'} alt={producto_promocion.producto_Id} />
+            <Image height={300} width={400} className="transition-all duration-300 opacity-80 hover:opacity-100 ml-20 mt-10 items-center" src={producto_promocion.imagen ?? '/default-image.jpg'} alt={`Producto ${producto_promocion.producto_Id}`} />
           </CardContent>
         </Card>
       ))}
     </div>
   );
-}
+};
 
 export default BarOfertas;

@@ -17,7 +17,7 @@ export default function Barra() {
             width={110}
             height={20}
             src="/images/letters.png"
-            className="h-15 mt-[-20px] opacity-80 hover:opacity-100 transition-all duration-400 ml-[35px]"
+            className="mt-[-20px] opacity-80 hover:opacity-100 transition-all duration-400 ml-[35px]"
           />
         </Link>
       </div>

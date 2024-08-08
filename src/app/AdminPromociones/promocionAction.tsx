@@ -3,7 +3,6 @@
 "use server";
 
 import prisma from "@/lib/prisma";
-import { redirect } from "next/navigation";
 
 export async function CreatePromocion(formData: FormData) {
   const productoStr = formData.get("producto_Id")?.toString() ?? "";
@@ -59,51 +58,17 @@ export async function CreatePromocion(formData: FormData) {
     });
 
     console.log("Nueva promoción creada:", newPromocion);
-
-    // Redirigir al usuario después de crear la promoción
-    redirect("/");
+    return newPromocion; // Devolver la nueva promoción creada
 
   } catch (error) {
     if (error instanceof Error) {
       console.error("Error al crear la promoción:", error.message);
       console.error("Detalles del error:", error);
-      // No lanzar excepción después de redirect
     } else {
       console.error("Error desconocido al crear la promoción:", error);
-      // No lanzar excepción después de redirect
     }
   }
-
-  redirect("/")
 }
-
-
-export async function DeletePromocion(formData: FormData) {
-  const promocion_IdStr = formData.get("productoPromo_Id")?.toString();
-  if (!promocion_IdStr) {
-    console.error("Promoción ID is missing");
-    return;
-  }
-
-  const productoPromo_Id = parseInt(promocion_IdStr, 10);
-
-  if (isNaN(productoPromo_Id)) {
-    console.error("Invalid promoción ID");
-    return;
-  }
-
-  try {
-    await prisma.producto_promocion.delete({
-      where: {
-        productoPromo_Id: productoPromo_Id,
-      },
-    });
-  } catch (error) {
-    console.error("Error deleting promoción:", error);
-  }
-  redirect("/AdminProductos");
-}
-
 
 export async function UpdatePromocion(formData: FormData) {
   const productoPromo_IdStr = formData.get("productoPromo_Id")?.toString();
@@ -141,7 +106,8 @@ export async function UpdatePromocion(formData: FormData) {
     });
 
     console.log("Promoción actualizada:", updatedPromocion);
-    redirect("/");
+    return updatedPromocion; // Devolver la promoción actualizada
+
   } catch (error) {
     if (error instanceof Error) {
       console.error("Error al actualizar la promoción:", error.message);
@@ -151,3 +117,29 @@ export async function UpdatePromocion(formData: FormData) {
     }
   }
 }
+
+export async function DeletePromocion(formData: FormData) {
+  const promocion_IdStr = formData.get("productoPromo_Id")?.toString();
+  if (!promocion_IdStr) {
+    console.error("Promoción ID is missing");
+    return;
+  }
+
+  const productoPromo_Id = parseInt(promocion_IdStr, 10);
+
+  if (isNaN(productoPromo_Id)) {
+    console.error("Invalid promoción ID");
+    return;
+  }
+
+  try {
+    await prisma.producto_promocion.delete({
+      where: {
+        productoPromo_Id: productoPromo_Id,
+      },
+    });
+  } catch (error) {
+    console.error("Error deleting promoción:", error);
+  }
+}
+

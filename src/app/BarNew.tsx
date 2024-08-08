@@ -1,24 +1,41 @@
-// /src/app/components/BarNew.tsx
+// /src/app/BarNew.tsx
 
-import React from 'react';
+"use client";
+
+import React, { useEffect, useState } from 'react';
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import prisma from "@/lib/prisma";
 import Image from 'next/image';
 
 interface BarnewProps {
   Limit?: number;
 }
 
-async function BarNew({ Limit }: BarnewProps): Promise<JSX.Element> {
+const BarNew: React.FC<BarnewProps> = ({ Limit }) => {
+  const [productos, setProductos] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
 
-  const takeValue = Limit ? parseInt(Limit.toString()) : undefined;
+  useEffect(() => {
+    const fetchProductos = async () => {
+      try {
+        const response = await fetch(`/api/products?limit=${Limit}`);
+        if (!response.ok) {
+          throw new Error('Error fetching productos');
+        }
+        const data = await response.json();
+        setProductos(data);
+      } catch (error) {
+        console.error('Failed to fetch productos:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
 
-  const productos = await prisma.productos.findMany({
-    take: takeValue,
-    orderBy: { createdAt: 'desc' }
-  });
+    fetchProductos();
+  }, [Limit]);
 
-  console.log(productos);
+  if (loading) {
+    return <p>Cargando productos...</p>;
+  }
 
   if (!productos.length) {
     return <p>No hay productos disponibles.</p>;
@@ -39,6 +56,6 @@ async function BarNew({ Limit }: BarnewProps): Promise<JSX.Element> {
       ))}
     </div>
   );
-}
+};
 
 export default BarNew;

@@ -1,4 +1,3 @@
-"use client"
 
 import Carousel from "./Carousel";
 import Barra from "./bar";
@@ -9,21 +8,8 @@ import Link from "next/link";
 import Image from "next/image";
 import Head from 'next/head';
 import BarOfertas from "./BarOfertas";
-import { useEffect, useState } from 'react';
 
 export default function Page() {
-  const [offers, setOffers] = useState([]);
-
-  const fetchOffers = async () => {
-    const response = await fetch('/api/offers');
-    const data = await response.json();
-    setOffers(data);
-  };
-
-  useEffect(() => {
-    fetchOffers();
-  }, []);
-
   const images = [
     "/images/Tarjetas.jpg",
     "/images/diseño-marca.jpg",
@@ -32,7 +18,6 @@ export default function Page() {
 
   return (
     <div className="flex-justify items-center">
-
       <Head>
         <title>Agencia Valore</title>
         <meta name="description" content="Bienvenido a Agencia Valore" />

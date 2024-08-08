@@ -1,5 +1,7 @@
 // src/app/AdminPromociones/CardWithFormPromocion.tsx
+"use client";
 
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ModeToggle } from "@/components/theme-toggle-button";
 import {
@@ -17,13 +19,29 @@ import { CreatePromocion, UpdatePromocion } from "../AdminPromociones/promocionA
 
 interface CardWithFormNewProps {
   promocion?: producto_promocion;
+  onPromocionCreatedOrUpdated?: (promocion: producto_promocion) => void;
 }
 
-export function CardWithFormPromocion({ promocion }: CardWithFormNewProps) {
+export function CardWithFormPromocion({ promocion, onPromocionCreatedOrUpdated }: CardWithFormNewProps) {
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const functionAction = promocion?.productoPromo_Id ? UpdatePromocion : CreatePromocion;
 
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    const formData = new FormData(e.target as HTMLFormElement);
+    const result = await functionAction(formData);
+
+    if (result && onPromocionCreatedOrUpdated) {
+      onPromocionCreatedOrUpdated(result);
+    }
+
+    setIsSubmitting(false);
+  };
+
   return (
-    <form action={functionAction} method="POST">
+    <form onSubmit={handleSubmit} method="POST">
       <Card className="w-[350px] relative">
         <CardHeader>
           <div className="flex justify-between absolute top-0 right-0">
@@ -71,9 +89,9 @@ export function CardWithFormPromocion({ promocion }: CardWithFormNewProps) {
           </div>
         </CardContent>
         <CardFooter className="flex justify-between">
-          <Button variant="outline">Cancelar</Button>
-          <Button type="submit">
-            {promocion?.productoPromo_Id ? "Actualizar promoción" : "Crear promoción"}
+          <Button variant="outline" type="button">Cancelar</Button>
+          <Button type="submit" disabled={isSubmitting}>
+            {isSubmitting ? "Enviando..." : promocion?.productoPromo_Id ? "Actualizar promoción" : "Crear promoción"}
           </Button>
         </CardFooter>
       </Card>

@@ -9,8 +9,8 @@ import {
 
 export default function Barra() {
   return (
-    <div className="shadow-gray-300 shadow-lg mt-5 bg-gray-100 grid grid-cols-7 rounded-xl h-16">
-      <div className="bg-cyan-600 rounded-xl h-16 hover:bg-cyan-700 transition-all duration-300">
+    <div className="shadow-gray-300 shadow-lg mt-5 bg-gray-100 grid lg:grid-cols-7 md:grid-cols-5 sm:grid-cols-1 lg:h-[68px] sm:h-[300px]  rounded-xl h-16">
+      <div className="bg-cyan-600 rounded-xl h-16 hover:bg-cyan-700 transition-all duration-300 lg:w-[200px] sm:w-[180px] sm:ml-[30px]">
         <Link href="/">
           <Image
             alt="Valore"
@@ -22,12 +22,12 @@ export default function Barra() {
         </Link>
       </div>
 
-      <div className="mt-2 ml-[200px]">
+      <div className="mt-2 lg:ml-[200px] sm:ml-[20px]">
         <NavigationMenuDemo />
       </div>
 
       <Link
-        className="transition-all duration-300 text text-xl font-sans py-4 px-6 rounded ml-[200px] text-center mx-auto relative overflow-hidden group hover:text-cyan-500"
+        className="transition-all duration-300 text text-xl font-sans py-4 px-6 rounded lg:ml-[200px] text-center mx-auto relative overflow-hidden group hover:text-cyan-500"
         type="button"
         href="/Ofertas"
       >
@@ -35,7 +35,7 @@ export default function Barra() {
       </Link>
 
       <Link
-        className=" transition-all duration-300 text-xl font-sans py-4 px-6 rounded ml-[200px] text-center mx-auto relative overflow-hidden group hover:text-cyan-500"
+        className=" transition-all duration-300 text-xl font-sans py-4 px-6 rounded lg:ml-[200px] text-center mx-auto relative overflow-hidden group hover:text-cyan-500"
         type="button"
         href="/Nuevos"
       >
@@ -43,7 +43,7 @@ export default function Barra() {
       </Link>
 
       <Link
-        className="transition-all duration-300 text-xl font-sans py-4 px-6 rounded ml-[200px] text-center mx-auto relative overflow-hidden group w-42 mt-[-12px] hover:text-cyan-500"
+        className="transition-all duration-300 text-xl font-sans py-4 px-6 rounded lg:mt-[-10px] lg:ml-[200px] sm:mt-2 text-center mx-auto relative overflow-hidden group w-42 mt-[-12px] hover:text-cyan-500"
         href="/Productos"
         type="button"
       >
@@ -59,13 +59,13 @@ export default function Barra() {
                 alt="Login"
                 width={50}
                 height={30}
-                className="rounded-full mt-[6px] ml-[300px] hover:bg-gray-300 transition-all duration-500"
+                className="rounded-full mt-[6px] lg:ml-[300px] sm:ml-[90px] hover:bg-gray-300 transition-all duration-500"
               />
             </Link>
           </div>
         </HoverCardTrigger>
-        <HoverCardContent className="ml-44 text-xs text-gray-800 text-center">
-          <h1 className="text-sm text-black border-b border-gray-300 w-[230px] text-center">Crear o iniciar sesion</h1>
+        <HoverCardContent className="ml-44 text-xs text-gray-800 text-center sm:ml-[-5px] lg:ml-[28s0px]">
+          <h1 className="text-sm text-black border-b  border-gray-300 w-[230px] text-center">Crear o iniciar sesion</h1>
           Registrate para recibir promociones y poder brindarte seguimiento de pedidos
         </HoverCardContent>
       </HoverCard>

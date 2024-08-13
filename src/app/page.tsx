@@ -33,7 +33,7 @@ export default function Page() {
 
       <div className="bg-gray-250 font-light text-sm w-full max-w-screen-md text-center mt-10 mx-auto p-4">
         A tu agencia, nos especializamos en: Publicidad, Marketing y Relaciones públicas
-        <div className=" mt-4 overflow-hidden lg:ml-44 sm:ml-24">
+        <div className=" mt-4 overflow-hidden lg:ml-44 sm:ml-24 ml-8">
           <Carousel images={images} width={400} height={400} />
         </div>
       </div>

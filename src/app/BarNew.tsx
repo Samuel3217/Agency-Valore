@@ -41,7 +41,7 @@ const BarNew: React.FC<BarnewProps> = ({ Limit }) => {
     return <p>No hay productos disponibles.</p>;
   }
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 lg:ml-0 ml-[90px] overflow-hidden">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 lg:ml-0 ml-[55px] overflow-hidden">
       {productos.map((producto: any) => (
         <Card key={producto.producto_Id} className="flex flex-col items-center  max-w-xs sm:max-w-sm md:max-w-md lg:max-w-xl p-4 sm:p-5 md:p-6 lg:p-1">
           <CardHeader className="text-center text-sm sm:text-base md:text-lg lg:text-xl">{producto.nombre}</CardHeader>

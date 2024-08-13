@@ -71,7 +71,7 @@ function Footer() {
             height={50}
             className="mr-2"
           />
-          <Link href="/Equipo">Nuestro emquipo</Link>
+          <Link href="/Equipo">Nuestro equipo</Link>
         </div>
       </div>
 

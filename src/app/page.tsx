@@ -16,7 +16,7 @@ export default function Page() {
   ];
 
   return (
-    <div className="flex flex-col items-center px-4 sm:px-6 lg:px-8">
+    <div>
       <Head>
         <title>Agencia Valore</title>
         <meta name="description" content="Bienvenido a Agencia Valore" />
@@ -27,7 +27,7 @@ export default function Page() {
         <Barra />
       </div>
 
-      <h1 className="text-3xl sm:text-4xl lg:text-5xl font-light text-center lg:mt-4 md:mt-4 sm:mt-4  transition-all duration-300 hover:text-cyan-700">
+      <h1 className="text-3xl sm:text-4xl lg:text-5xl font-light text-center mt-5 lg:mt-4 md:mt-4 sm:mt-4  transition-all duration-300 hover:text-cyan-700">
         Bienvenidos
       </h1>
 

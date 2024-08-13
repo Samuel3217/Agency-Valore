@@ -19,7 +19,7 @@ function page() {
 
   return (
     <div>
-      <div className="sm:w-[250px] sm:ml-[200px] md:w-[600px] md:ml-[100px]">
+     <div className="sm:w-[250px] sm:ml-[200px] md:w-[600px] md:ml-[100px] lg:w-[1335px] lg:ml-[-0px]">
         <Barra />
       </div>
 

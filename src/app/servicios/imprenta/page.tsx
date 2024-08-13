@@ -24,9 +24,10 @@ function page() {
   ]
   return (
     <div>
-      <div className="sm:w-[250px] sm:ml-[200px] md:w-[600px] md:ml-[100px]">
+      <div className="sm:w-[250px] sm:ml-[200px] md:w-[600px] md:ml-[100px] lg:w-[1335px] lg:ml-[-0px]">
         <Barra />
       </div>
+      
       <h1 className="text-3xl font-bold hover:text-cyan-500 transition-all duration-300 text-center mt-10"
         > Imprenta</h1>
     <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 sm:ml-[210px] md:ml-[120px] mt-10 ml-[100px]">

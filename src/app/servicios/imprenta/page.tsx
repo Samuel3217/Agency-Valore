@@ -24,12 +24,12 @@ function page() {
   ]
   return (
     <div>
-      <div className="mt-2 ml-2 w-[1325px]">
+      <div className="sm:w-[250px] sm:ml-[200px] md:w-[600px] md:ml-[100px]">
         <Barra />
       </div>
       <h1 className="text-3xl font-bold hover:text-cyan-500 transition-all duration-300 text-center mt-10"
         > Imprenta</h1>
-    <div className="grid grid-cols-3 mt-10 ml-[100px]">
+    <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 sm:ml-[210px] md:ml-[120px] mt-10 ml-[100px]">
       <div className="">
         <Image
         className=""
@@ -41,7 +41,7 @@ function page() {
         >
 
         </Image>
-      <div className="w-[250px] h-[500px] mt-5">
+      <div className="mt-5">
         <Carousel images={formato} width={250} height={400}/>
       </div>
 
@@ -56,7 +56,7 @@ function page() {
         height={30}
         >
         </Image>
-        <div className="w-[250px] h-[500px] mt-5">
+        <div className="mt-5">
           <Carousel images={diseño} height={400} width={250}/>
         </div>
 
@@ -64,7 +64,7 @@ function page() {
 
       <div>
       <Image
-        className=""
+        className="md:ml-[150px] mt-10"
         src="/images/personalizado.png"
         alt="Souvenirs personalizados"
         width={250}
@@ -73,7 +73,7 @@ function page() {
         >
 
         </Image>
-        <div className="w-[250px] h-[500px] mt-5">
+        <div className="md:ml-[150px] md:mt-10">
           <Carousel images={personalizado} height={400} width={250}/>
         </div>
       </div>

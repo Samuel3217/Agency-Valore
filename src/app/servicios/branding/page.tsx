@@ -19,7 +19,7 @@ function page() {
 
   return (
     <div>
-      <div className="mt-2 ml-2 w-[1325px]">
+      <div className="sm:w-[250px] sm:ml-[200px] md:w-[600px] md:ml-[100px]">
         <Barra />
       </div>
 
@@ -27,10 +27,10 @@ function page() {
         Branding Corporativo
       </h1>
 
-      <div className="grid grid-cols-2 mt-10 ml-20">
+      <div className="grid lg:grid-cols-2 md:grid-cols-1 mt-10 lg:ml-20 md:ml-[240px] sm:ml-[170px] ml-[100px]">
         <Carousel images={branding} width={300} height={400} />
 
-        <p className="text-2xl mt-[200px] text-justify ml-[-100px] w-[700px]">
+        <p className="lg:text-2xl md:text-2xl text-xl lg:mt-[200px] sm:text-xl sm:text-center text-justify lg:ml-[-100px] md:ml-[-40px] sm:ml-[-90px] ml-[-60px] lg:w-[700px] md:w-[400px] sm:w-[500px] w-[400px]">
           Somos tu equipo de profesionales creativos. Trabajamos en conjunto
           para ayudar a las empresas y freelance. Nuestro objetivo es que todos
           nuestros clientes alcancen sus objetivos comerciales y/o de

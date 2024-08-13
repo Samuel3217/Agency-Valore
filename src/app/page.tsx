@@ -23,11 +23,11 @@ export default function Page() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="">
+      <div className="sm:w-[250px] sm:ml-[200px] md:w-[600px] md:ml-[100px] lg:w-[1335px] lg:ml-[-0px]">
         <Barra />
       </div>
 
-      <h1 className="text-3xl sm:text-4xl lg:text-5xl font-light text-center mt-4 transition-all duration-300 hover:text-cyan-700">
+      <h1 className="text-3xl sm:text-4xl lg:text-5xl font-light text-center lg:mt-4 md:mt-4 sm:mt-4  transition-all duration-300 hover:text-cyan-700">
         Bienvenidos
       </h1>
 

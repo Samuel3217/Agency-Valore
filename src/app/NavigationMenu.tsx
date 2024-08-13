@@ -53,9 +53,9 @@ export function NavigationMenuDemo() {
       <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuTrigger
-            className="bg-cyan-600 text-white hover:bg-cyan-600 transition-all duration-300 text-lg mt-1"
+            className="bg-cyan-600 text-white hover:bg-cyan-600 transition-all duration-300 text-lg mt-1 "
           >
-            Nuestros servicios
+            Nuestros servicios 
           </NavigationMenuTrigger>
           <NavigationMenuContent className="">
             <ul className="bg-gray-200 grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">

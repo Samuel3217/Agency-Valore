@@ -6,7 +6,7 @@ import Image from "next/image";
 function page() {
   return (
     <div>
-      <div className="mt-2 ml-2 w-[1325px]">
+      <div className="sm:w-[250px] sm:ml-[200px] md:w-[600px] md:ml-[100px]">
         <Barra />
       </div>
 
@@ -14,7 +14,7 @@ function page() {
         Capacitacion empresarial
       </h1>
 
-      <div className="grid grid-cols-2 mt-10 gap-5 items-center">
+      <div className="grid lg:grid-cols-2 md:grid-cols-1 md:ml-[120px] sm:ml-[40px] ml-[-30px] mt-10 gap-5 items-center">
         <Image
           src="/images/capacitacion.jpg"
           alt="Capacitacion empresarial"
@@ -22,7 +22,7 @@ function page() {
           height={30}
           className="rounded-2xl ml-20"
         ></Image>
-        <p className="text-2xl ml-[-100px] text-justify w-[550px] mt-20">
+        <p className="lg:text-2xl md:text-xl sm:text-xl text-xl lg:ml-[-100px] md:ml-[20px] sm:ml-[30px] ml-[70px] text-center lg:w-[550px] md:w-[500px] sm:w-[500px] w-[400px] mt-20">
           Fortalece y logra tus objetivos por medio del desarrollo de las{" "}
           <strong>capacidades, habilidades y virtudes profesionales</strong>,
           tanto a nivel individual como en el de todo tu equipo.
@@ -31,7 +31,7 @@ function page() {
 
       <br />
 
-      <div className="grid grid-cols-4 mt-20 ml-[100px]">
+      <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 md:gap-5 mt-20 lg:ml-[100px] md:ml-[140px] sm:ml-[250px] ml-[180px]">
         <div>
           <Image
             alt="Trabajo en equipo"
@@ -76,11 +76,11 @@ function page() {
           <p className="text-xl ml-[-25px] font-bold">Habilidades directivas</p>
         </div>
       </div>
-      <h1 className="mt-10 items-center text-2xl font-satisfy justify-center ml-[590px] w-72">
+      <h1 className="mt-10 items-center text-2xl font-satisfy justify-center lg:ml-[590px] md:ml-[280px] sm:ml-[240px] w-72">
         <strong>Cotiza tu taller</strong>
       </h1>
 
-      <h1 className="mt-5 font-bold items-center text-xl justify-center ml-[550px]">
+      <h1 className="mt-5 font-bold items-center text-xl justify-center lg:ml-[550px] md:ml-[240px] sm:ml-[200px]">
         Entregamos DC3 y diplomas
       </h1>
 

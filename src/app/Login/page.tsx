@@ -10,8 +10,8 @@ import UsuariosServer from './UsuariosServer';
 const Page = () => {
   return (
     <div className="">
-      <div className="mt-2 ml-2 w-[1325px]">
-      <Barra />
+      <div className="sm:w-[250px] sm:ml-[200px] md:w-[600px] md:ml-[100px] lg:w-[1335px] lg:ml-[-0px]">
+        <Barra />
       </div>
       <Menu2 />
 
@@ -24,7 +24,7 @@ const Page = () => {
       </h3>
       <h3 className="text-center text-red-500">Y NADA MÁS</h3>
 
-      <div className="grid grid-cols-2 gap-5 mt-10 ml-[250px]">
+      <div className="grid lg:grid-cols-2 gap-5 mt-10 lg:ml-[250px] md:ml-[250px] sm:ml-[180px]">
         <div>
           <UsuariosServer />
         </div>

@@ -45,24 +45,24 @@ export default function Page() {
       </div>
 
       <Link
-        className="text-2xl sm:text-3xl font-sans mt-8 hover:text-cyan-700 transition-all duration-300 mx-auto"
+        className="text-2xl sm:text-3xl font-sans mt-10 hover:text-cyan-700 transition-all duration-300 mx-auto text-center lg:ml-[600px] ml-[180px]"
         href="/Ofertas"
       >
         ¡¡Ofertas!!
       </Link>
 
-      <div className="mt-10 w-full max-w-screen-lg mx-auto shadow-lg p-4 bg-gray-200 rounded-lg">
+      <div className="mt-5 w-full max-w-screen-lg mx-auto shadow-lg p-4 bg-gray-200 rounded-lg ">
         <BarOfertas Limit={2} />
       </div>
 
       <Link
-        className="text-2xl sm:text-3xl font-sans mt-8 hover:text-cyan-700 transition-all duration-300 mx-auto"
+        className="text-2xl sm:text-3xl font-sans lg:mt-10 hover:text-cyan-700 transition-all duration-300 mx-auto lg:ml-[600px] ml-[180px]"
         href="/Nuevos"
       >
         ¡¡Nuevos!!
       </Link>
 
-      <div className="mt-10 w-full max-w-screen-lg mx-auto shadow-lg p-4 bg-gray-200 rounded-lg">
+      <div className="mt-5 w-full max-w-screen-lg mx-auto shadow-lg p-4 bg-gray-200 rounded-lg">
         <BarNew Limit={5} />
       </div>
 

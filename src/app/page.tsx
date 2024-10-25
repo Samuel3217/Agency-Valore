@@ -7,6 +7,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Head from 'next/head';
 import BarOfertas from "./BarOfertas";
+import Carrusel from '../components/carrusel'
 
 export default function Page() {
   const images = [
@@ -31,16 +32,16 @@ export default function Page() {
         Bienvenidos
       </h1>
 
-      <div className="bg-gray-250 font-light text-sm w-full max-w-screen-md text-center mt-10 mx-auto p-4">
-        A tu agencia, nos especializamos en: Publicidad, Marketing y Relaciones públicas
-        <div className=" mt-4 overflow-hidden lg:ml-44 sm:ml-24 ml-8">
-          <Carousel images={images} width={400} height={400} />
+      <div className="bg-gray-250 font-light text-sm w-full max-w-screen-md flex flex-col justify-center mt-10 mx-auto p-4 ">
+        <p className="text-center">A tu agencia, nos especializamos en: Publicidad, Marketing y Relaciones públicas</p>
+        <div className=" mt-16 mx-auto">
+          <Carrusel/>
         </div>
       </div>
 
       <Menu2 />
 
-      <div className="bg-white text-black flex justify-center mt-8 px-4">
+      <div className="bg-white text-black flex justify-center mt-10 px-4">
         <Image src="/images/envios.png" width={1100} height={20} alt="Envios a toda la republica" />
       </div>
 

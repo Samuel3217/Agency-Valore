@@ -37,6 +37,9 @@ function page() {
           comunicación, mediante estrategias de marketing visual y comunicación
           efectiva.
         </p>
+        <div>
+        <button className="bg-cyan-600 ring-1 mt-10 ring-gray-300 text-white hover:bg-white hover:text-black hover:ring-white transition-all duration-300 h-16 w-[300px] text-2xl rounded-lg ml-[430px]">¡Contactanos!</button>
+    </div>
       </div>
 
       <Menu2 />

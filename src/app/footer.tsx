@@ -4,7 +4,7 @@ import Image from "next/image";
 function Footer() {
   return (
     <div className="bg-gray-200 w-full lg:w-[1320px] h-auto lg:h-[320px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2  md:gap-20 mt-10 lg:ml-[-16px] lg:grid-cols-4 gap-4 p-4 mx-auto lg:gap-4">
-      
+
       <Link className="flex flex-col items-center" href="/">
         <Image
           alt="Logo de valore"

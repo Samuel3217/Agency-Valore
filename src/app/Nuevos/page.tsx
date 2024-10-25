@@ -11,7 +11,6 @@ function page() {
       </div>
 
       <h1 className="text-center mt-5 text-3xl text-black hover:text-cyan-700 transition-all duration-300">Nuevos</h1>
-
       <div className="mt-10 ml-6 lg:w-[1350px]">
             <BarNew Limit={10}/>
         </div>

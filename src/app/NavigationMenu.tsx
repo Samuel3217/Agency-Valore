@@ -1,8 +1,8 @@
 "use client"
- 
+
 import * as React from "react"
 import Link from "next/link"
- 
+
 import { cn } from "@/lib/utils"
 import {
   NavigationMenu,
@@ -13,7 +13,7 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
- 
+
 const components: { title: string; href: string; description: string }[] = [
   {
     title: "Imprenta",
@@ -55,7 +55,7 @@ export function NavigationMenuDemo() {
           <NavigationMenuTrigger
             className="bg-cyan-600 text-white hover:bg-cyan-600 transition-all duration-300 text-lg mt-1 "
           >
-            Nuestros servicios 
+            Nuestros servicios
           </NavigationMenuTrigger>
           <NavigationMenuContent className="">
             <ul className="bg-gray-200 grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
@@ -90,6 +90,7 @@ const ListItem = React.forwardRef<
             "bg-white block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
             className
           )}
+          target="blank"
           {...props}
         >
           <div className="text-sm font-medium leading-none">{title}</div>

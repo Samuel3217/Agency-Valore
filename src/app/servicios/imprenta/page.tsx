@@ -27,7 +27,7 @@ function page() {
       <div className="sm:w-[250px] sm:ml-[200px] md:w-[600px] md:ml-[100px] lg:w-[1335px] lg:ml-[-0px]">
         <Barra />
       </div>
-      
+
       <h1 className="text-3xl font-bold hover:text-cyan-500 transition-all duration-300 text-center mt-10"
         > Imprenta</h1>
     <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 sm:ml-[210px] md:ml-[120px] mt-10 ml-[100px]">
@@ -78,6 +78,9 @@ function page() {
           <Carousel images={personalizado} height={400} width={250}/>
         </div>
       </div>
+    </div>
+    <div>
+        <button className="bg-cyan-600 ring-1 ring-gray-300 text-white hover:bg-white hover:text-black hover:ring-white transition-all duration-300 h-16 w-[300px] text-2xl rounded-lg ml-[510px]">¡Contactanos!</button>
     </div>
       <div>
         <Menu2 />

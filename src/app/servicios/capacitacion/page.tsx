@@ -80,9 +80,13 @@ function page() {
         <strong>Cotiza tu taller</strong>
       </h1>
 
-      <h1 className="mt-5 font-bold items-center text-xl justify-center lg:ml-[550px] md:ml-[240px] sm:ml-[200px]">
+      <h1 className="mt-5 font-bold items-center text-xl justify-center lg:ml-[520px] md:ml-[240px] sm:ml-[200px]">
         Entregamos DC3 y diplomas
       </h1>
+
+      <div>
+        <button className="bg-cyan-600 ring-1 ring-gray-300 text-white hover:bg-white hover:text-black hover:ring-white transition-all duration-300 h-16 w-[300px] text-2xl mt-10 rounded-lg ml-[510px]">¡Contactanos!</button>
+    </div>
 
       <Menu2 />
       <Footer />

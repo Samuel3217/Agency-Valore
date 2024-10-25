@@ -1,7 +1,7 @@
 // src/app/layout.tsx
 
 import type { Metadata } from "next";
-import { Inter as FontSans } from "next/font/google";
+import { Inter as FontSans, Satisfy } from "next/font/google";
 import Head from "next/head";
 import "./globals.css";
 import { cn } from "@/lib/utils";
@@ -12,6 +12,12 @@ const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
 });
+
+const satisfy = Satisfy({
+  weight: "400",
+  variable: "--satisfy",
+  subsets: ["latin"],
+})
 
 // Definición de metadatos
 export const metadata: Metadata = {
@@ -51,7 +57,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </Head>
-      <body className={cn("min-h-screen bg-background font-sans antialiased", fontSans.variable)}>
+      <body className={cn("min-h-screen bg-background font-sans antialiased", fontSans.variable, satisfy.variable)}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
           {children}
         </ThemeProvider>

@@ -50,10 +50,10 @@ export default function Barra() {
         Todos los productos
       </Link>
 
-      <HoverCard>
+    <HoverCard>
       <HoverCardTrigger asChild>
           <div className="cursor-pointer">
-            <Link href="/Login">
+            <Link href="">
               <Image
                 src="/images/login.png"
                 alt="Login"
@@ -62,6 +62,7 @@ export default function Barra() {
                 className="rounded-full mt-[6px] ml-[215px] lg:ml-[300px] sm:ml-[90px] hover:bg-gray-300 transition-all duration-500"
               />
             </Link>
+
           </div>
         </HoverCardTrigger>
         <HoverCardContent className="ml-44 text-xs text-gray-800 text-center sm:ml-[-5px] lg:ml-[280px]">

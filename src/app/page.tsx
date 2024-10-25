@@ -35,7 +35,7 @@ export default function Page() {
       <div className="bg-gray-250 font-light text-sm w-full max-w-screen-md flex flex-col justify-center mt-10 mx-auto p-4 ">
         <p className="text-center">A tu agencia, nos especializamos en: Publicidad, Marketing y Relaciones públicas</p>
         <div className=" mt-16 mx-auto">
-          <Carrusel/>
+        <Carousel images={images} width={400} height={400} />
         </div>
       </div>
 

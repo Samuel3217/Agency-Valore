@@ -50,26 +50,7 @@ export default function Barra() {
         Todos los productos
       </Link>
 
-    <HoverCard>
-      <HoverCardTrigger asChild>
-          <div className="cursor-pointer">
-            <Link href="">
-              <Image
-                src="/images/login.png"
-                alt="Login"
-                width={50}
-                height={30}
-                className="rounded-full mt-[6px] ml-[215px] lg:ml-[300px] sm:ml-[90px] hover:bg-gray-300 transition-all duration-500"
-              />
-            </Link>
-
-          </div>
-        </HoverCardTrigger>
-        <HoverCardContent className="ml-44 text-xs text-gray-800 text-center sm:ml-[-5px] lg:ml-[280px]">
-          <h1 className="text-sm text-black border-b  border-gray-300 w-[230px] text-center">Crear o iniciar sesion</h1>
-          Registrate para recibir promociones y poder brindarte seguimiento de pedidos
-        </HoverCardContent>
-      </HoverCard>
+   
     </div>
   );
 }

@@ -3,6 +3,7 @@ import { Menu2 } from "@/app/Menu2";
 import Footer from "@/app/footer";
 import Carousel from "@/app/Carousel";
 import Image from "next/image";
+import Link from "next/link";
 
 function page() {
   const formato = [
@@ -80,7 +81,14 @@ function page() {
       </div>
     </div>
     <div>
-        <button className="bg-cyan-600 ring-1 ring-gray-300 text-white hover:bg-white hover:text-black hover:ring-white transition-all duration-300 h-16 w-[300px] text-2xl rounded-lg ml-[510px]">¡Contactanos!</button>
+    <button className="bg-cyan-600 ring-1 ring-gray-300 text-white hover:bg-white hover:text-black hover:ring-white transition-all duration-300 h-16 w-[300px] text-2xl mt-10 rounded-lg ml-[510px]"
+         >
+            <Link  href="https://wa.me/5214499800425" passHref
+             target="_blank" rel="noopener noreferrer"
+            >
+            ¡Contactanos!
+            </Link>
+            </button>
     </div>
       <div>
         <Menu2 />

@@ -16,6 +16,22 @@ function page() {
         <p className='text-3xl'>Inter</p>
         <p className='text-4xl'>Inter</p>
     </div>
+
+    <div className='mt-10'>
+        <p className='text-xl font-bold'>Bold</p>
+        <p className='text-2xl font-bold'>Bold</p>
+        <p className='text-3xl font-bold'>Bold</p>
+        <p className='text-4xl font-bold'>Bold</p>
+    </div>
+
+    <div className='bg-cyan-600 w-20 h-20 mt-5'>Jade 600
+    </div>
+    <div className='bg-cyan-400 w-20 h-20'>Cyan 400</div>
+    <div className='bg-gray-300 w-20 h-20'>gris 300</div>
+    <div className='bg-gray-200 w-20 h-20'>gris 200</div>
+    <div className='bg-black w-20 h-20 text-white'>Negro</div>
+
+    <div ></div>
     </div>
   )
 }

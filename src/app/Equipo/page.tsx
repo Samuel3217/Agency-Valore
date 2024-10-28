@@ -2,6 +2,7 @@ import Image from "next/image";
 import Footer from "../footer";
 import { Menu2 } from "../Menu2";
 import Barra from "../bar";
+import Link from "next/link";
 
 
 function page() {
@@ -39,7 +40,7 @@ function page() {
           height={30}
           className=" ml-5 rounded-full border-4 border-black"
           ></Image>
-          <p 
+          <p
           className="text-center text-2xl ml-7 w-[220px] mt-6"
           >Recursos humanos</p>
         </div>
@@ -107,7 +108,7 @@ function page() {
           height={30}
           className=" ml-5 rounded-full border-4 border-black"
           ></Image>
-          <p 
+          <p
           className="text-center text-2xl ml-7 w-[220px] mt-6"
           >Capacitadores</p>
         </div>
@@ -139,6 +140,17 @@ function page() {
         </div>
 
       </div>
+
+      <h1 className="text-2xl font-bold text-center mt-10">¿Interesado en unirtenos?</h1>
+
+      <button className="bg-cyan-600 ring-1 ring-gray-300 text-white hover:bg-white hover:text-black hover:ring-white transition-all duration-300 h-16 w-[300px] text-2xl mt-10 rounded-lg ml-[530px]"
+         >
+            <Link  href="https://wa.me/5214499800425" passHref
+             target="_blank" rel="noopener noreferrer"
+            >
+            ¡Unetenos!
+            </Link>
+            </button>
         <Menu2/>
 
       <Footer/>

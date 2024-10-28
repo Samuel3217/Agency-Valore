@@ -46,7 +46,8 @@ function page() {
             >
             ¡Contactanos!
             </Link>
-            </button></div>
+            </button>
+            </div>
       </div>
 
       <Menu2 />

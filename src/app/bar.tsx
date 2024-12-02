@@ -9,25 +9,25 @@ import {
 
 export default function Barra() {
   return (
-    <div className="shadow-gray-300 shadow-lg mt-5 bg-gray-100 grid lg:grid-cols-7 md:grid-cols-2 sm:grid-cols-1 grid-cols-1 lg:h-[68px] sm:h-[300px]  rounded-xl">
-      <div className="bg-cyan-600 rounded-xl h-16 hover:bg-cyan-700 transition-all duration-300  w-[180px] lg:w-[180px] sm:w-[180px] sm:ml-[30px] ml-[160px]">
+    <div className="shadow-gray-300 shadow-lg mt-5 bg-gray-100 items-center justify-between flex flex-col gap-y-3 lg:flex-row md:flex-col sm:flex-col md:py-2 py-2 mx-5 sm:py-2 rounded-xl px-5 lg:text-2xl md:text-lg md:text-opacity-75 sm:text-sm text-base ">
+      <div className="bg-cyan-600 rounded-xl h-16 hover:bg-cyan-700 transition-all duration-300 flex items-center justify-center px-10">
         <Link href="/">
           <Image
             alt="Valore"
-            width={110}
-            height={20}
+            width={120}
+            height={30}
             src="/images/letters.png"
-            className="mt-[-20px] opacity-80 hover:opacity-100 transition-all duration-400 ml-[35px]"
+            className="opacity-80 hover:opacity-100 transition-all duration-400"
           />
         </Link>
       </div>
 
-      <div className="mt-2 lg:ml-[200px] ml-[150px] sm:ml-[20px]">
+
         <NavigationMenuDemo />
-      </div>
+
 
       <Link
-        className="transition-all duration-300 text-xl font-sans py-4 px-6 rounded lg:ml-[200px] text-center mx-auto relative overflow-hidden group hover:text-cyan-500"
+        className="transition-all duration-300 font-sans rounded text-center hover:text-cyan-500"
         type="button"
         href="/Ofertas"
       >
@@ -35,7 +35,7 @@ export default function Barra() {
       </Link>
 
       <Link
-        className=" transition-all duration-300 text-xl font-sans py-4 px-6 rounded lg:ml-[200px] text-center mx-auto relative overflow-hidden group hover:text-cyan-500"
+        className=" transition-all duration-300 font-sans text-center hover:text-cyan-500"
         type="button"
         href="/Nuevos"
       >
@@ -43,14 +43,14 @@ export default function Barra() {
       </Link>
 
       <Link
-        className="transition-all duration-300 text-xl font-sans py-4 px-6 rounded lg:mt-[-10px] lg:ml-[200px] sm:mt-2 text-center mx-auto relative overflow-hidden group w-42 mt-[-12px] hover:text-cyan-500"
+        className="transition-all duration-300 font-sans rounded text-center hover:text-cyan-500"
         href="/Productos"
         type="button"
       >
         Todos los productos
       </Link>
 
-   
+
     </div>
   );
 }

@@ -6,6 +6,7 @@ import Head from "next/head";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/theme-provider";
+import Barra from "./bar";
 
 // Configuración de la fuente 'Inter'
 const fontSans = FontSans({
@@ -36,7 +37,7 @@ export default function RootLayout({
     typeof metadata.description === "string"
       ? metadata.description
       : "Bienvenido a Agencia Valore";
-      
+
   return (
     <html lang="es" suppressHydrationWarning>
       <Head>
@@ -58,6 +59,7 @@ export default function RootLayout({
         />
       </Head>
       <body className={cn("min-h-screen bg-background font-sans antialiased", fontSans.variable, satisfy.variable)}>
+        <Barra/>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
           {children}
         </ThemeProvider>

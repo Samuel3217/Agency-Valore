@@ -7,9 +7,9 @@ import Image from 'next/image';
 function page() {
   return (
     <div>
-        <div className="mt-2 ml-2 w-[1325px]">
+
       <Barra/>
-      </div>
+
 
       <h1
       className="text-3xl font-bold hover:text-cyan-500 transition-all duration-300 text-center mt-10"
@@ -20,7 +20,7 @@ function page() {
       >&quot;Trabajemos juntos para mostrar la mejor version de nosotros&quot;
 </h1>
 
-      <div className='grid grid-cols-5 ml-10 mt-16 gap-10'>
+      <div className='flex flex-col justify-center items-center '>
 
         <div className='shadow-lg w-[200px]'>
           <Image
@@ -28,8 +28,8 @@ function page() {
           alt="Universidad de estudios avanzados"
           width={200}
           height={30}
-          ></Image>
-          
+          />
+
         </div>
 
         <div className='shadow-lg w-[240px]'>
@@ -40,7 +40,7 @@ function page() {
           height={30}
           >
           </Image>
-     
+
         </div>
 
         <div className='shadow-lg w-[240px]'>

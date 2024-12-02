@@ -6,39 +6,36 @@ import Link from "next/link";
 
 function page() {
   return (
-    <div>
-      <div className="sm:w-[250px] sm:ml-[200px] md:w-[600px] md:ml-[100px] lg:w-[1335px] lg:ml-[-0px]">
-        <Barra />
-      </div>
-
+    <div className="">
       <h1 className="text-3xl font-bold hover:text-cyan-500 transition-all duration-300 text-center mt-10">
         Marketing digital
       </h1>
 
-      <div>
-        <p className="mt-10 lg:text-xl lg:ml-[380px] lg:w-[600px] md:ml-[10px] text-center items-center">
+      <div className="flex flex-col items-center justify-center px-10 text-center">
+        <p className="mt-10 lg:text-xl ">
           Posicionamos tu marca o mensaje en los canales que mejor se adapten a
           tu segmento de mercado. Somos tu equipo experto en publicidad,
           relaciones públicas, medios digitales y estrategias de contenido.
         </p>
-      </div>
-      <div>
-        <Image src="https://i.pinimg.com/564x/63/a3/f3/63a3f3ce116526d19446869dfb48b170.jpg"
-        alt="Marketing digital"
-        height={100}
-        width={300}
-        className="mt-[-100px] ml-10"
+
+        <Image
+          src="https://i.pinimg.com/564x/63/a3/f3/63a3f3ce116526d19446869dfb48b170.jpg"
+          alt="Marketing digital"
+          height={100}
+          width={300}
+          className=""
         />
-      </div>
-      <div>
-      <button className="bg-cyan-600 ring-1 ring-gray-300 text-white hover:bg-white hover:text-black hover:ring-white transition-all duration-300 h-16 w-[300px] text-2xl mt-10 rounded-lg ml-[510px]"
-         >
-            <Link  href="https://wa.me/5214499800425" passHref
-             target="_blank" rel="noopener noreferrer"
-            >
+
+        <button className="bg-cyan-600 ring-1 ring-gray-300 text-white hover:bg-white hover:text-black hover:ring-white transition-all duration-300 h-16 w-max px-5 text-2xl mt-10 rounded-lg ">
+          <Link
+            href="https://wa.me/5214499800425"
+            passHref
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             ¡Contactanos!
-            </Link>
-            </button>
+          </Link>
+        </button>
       </div>
       <Menu2 />
       <Footer />

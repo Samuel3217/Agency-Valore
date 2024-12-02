@@ -6,9 +6,7 @@ import Barra from "../bar";
 const Page = () => {
   return (
     <div className="container mx-auto p-4 flex-justify items-center">
-      <div className="mt-[-20px]">
-        <Barra />
-      </div>
+  
       <Menu2 />
       <h1 className="text-3xl font-bold hover:text-cyan-500 transition-all duration-300 text-center mt-10">
         Nuestro Compromiso

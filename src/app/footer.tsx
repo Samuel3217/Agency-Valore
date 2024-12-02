@@ -3,7 +3,7 @@ import Image from "next/image";
 
 function Footer() {
   return (
-    <div className="bg-gray-200 w-full lg:w-[1320px] h-auto lg:h-[320px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2  md:gap-20 mt-10 lg:ml-[-16px] lg:grid-cols-4 gap-4 p-4 mx-auto lg:gap-4">
+    <div className="bg-gray-200 justify-center md:gap-20 flex flex-col lg:flex-row items-center mt-10">
 
       <Link className="flex flex-col items-center" href="/">
         <Image
@@ -21,7 +21,7 @@ function Footer() {
         />
       </Link>
 
-      <div className="flex flex-col">
+      <div className="flex flex-col py-2 ">
         <div className="flex items-center text-base hover:text-cyan-600 mb-4">
           <Image
             alt="Compromiso"
@@ -48,7 +48,7 @@ function Footer() {
           </Link>
         </div>
 
-        <div className="flex items-center text-base hover:text-cyan-600 mb-4">
+        <div className="flex items-center  text-base hover:text-cyan-600 mb-4">
           <Image
             alt="horarios"
             width={40}
@@ -60,9 +60,8 @@ function Footer() {
             Horarios
           </Link>
         </div>
-      </div>
 
-      <div className="flex flex-col items-center lg:ml-0 ml-[-270px] lg:mt-0 mt-[-20px]">
+
         <div className="flex items-center text-base hover:text-cyan-600 mb-4">
           <Image
             src="/images/equipo.png"
@@ -73,15 +72,15 @@ function Footer() {
           />
           <Link href="/Equipo">Nuestro equipo</Link>
         </div>
-      </div>
+        </div>
 
-      <div className="lg:flex lg:justify-center lg:items-center">
+
+      <div className="lg:flex justify-center items-center">
         <Image
           src="/images/qr.jpg"
           alt="Codigo QR"
           width={250}
           height={400}
-          className="lg:mt-[-50px] ml-[100px] lg:ml-[10px]"
         />
       </div>
     </div>

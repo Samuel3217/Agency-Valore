@@ -6,9 +6,7 @@ import Barra from "../bar";
 function page() {
   return (
     <div>
-          <div className="mt-2 ml-2 w-[1325px]">
-        <Barra />
-      </div>
+
 
       <div className="mt-10 ml-[400px] shadow-lg w-[580px]">
         <Image

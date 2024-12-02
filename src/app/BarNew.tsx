@@ -41,21 +41,32 @@ const BarNew: React.FC<BarnewProps> = ({ Limit }) => {
     return <p>No hay productos disponibles.</p>;
   }
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 lg:ml-0 ml-[55px] overflow-hidden">
+    <div className="flex gap-5 flex-col lg:flex-row ">
       {productos.map((producto: any) => (
-        <Card key={producto.producto_Id} className="flex flex-col items-center  max-w-xs sm:max-w-sm md:max-w-md lg:max-w-xl p-4 sm:p-5 md:p-6 lg:p-1">
-          <CardHeader className="text-center text-sm sm:text-base md:text-lg lg:text-xl">{producto.nombre}</CardHeader>
-          <CardContent className="flex flex-col items-center w-full">
+        <Card
+          key={producto.producto_Id}
+          className="flex flex-col  lg:flex-row items-center  w-auto"
+        >
+          <CardHeader className="text-2xl">
             <Image
-              height={100}
-              width={100}
-              className="h-24 w-24 hover:w-[110px] hover:h-28 transition-all duration-300 opacity-80 hover:opacity-100"
-              src={producto.imagen ?? ''}
+              height={300}
+              width={300}
+              className="transition-all duration-300 opacity-80 hover:opacity-100"
+              src={producto.imagen ?? ""}
               alt={producto.nombre}
             />
-            <p className="mt-2 text-base sm:text-sm md:text-base lg:text-base">{producto.precio}</p>
-            <p className="text-base sm:text-sm md:text-base lg:text-base text-center">{producto.descripcion}</p>
-            <p className="text-base sm:text-sm md:text-base lg:text-base">Cantidad: {producto.stock}</p>
+          </CardHeader>
+          <CardContent className="flex flex-col text-xl items-center w-full">
+            {producto.nombre}
+            <p className="mt-2 text-base sm:text-sm md:text-base lg:text-base">
+              {producto.precio}
+            </p>
+            <p className="text-base sm:text-sm md:text-base lg:text-base text-center">
+              {producto.descripcion}
+            </p>
+            <p className="text-base sm:text-sm md:text-base lg:text-base">
+              Cantidad: {producto.stock}
+            </p>
           </CardContent>
         </Card>
       ))}

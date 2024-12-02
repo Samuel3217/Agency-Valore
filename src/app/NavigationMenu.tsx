@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import Link from "next/link"
+import * as React from "react";
+import Link from "next/link";
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -12,9 +12,14 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu"
+} from "@/components/ui/navigation-menu";
 
-const components: { title: string; href: string; description: string }[] = [
+const components: {
+  title: string;
+  href: string;
+  description: string;
+  blank?: boolean;
+}[] = [
   {
     title: "Imprenta",
     href: "/servicios/imprenta",
@@ -23,12 +28,14 @@ const components: { title: string; href: string; description: string }[] = [
   {
     title: "Branding Corporativo",
     href: "/servicios/branding",
-    description: "Alcanza tus metas con nosotros, mejora tu imagen publicitaria.",
+    description:
+      "Alcanza tus metas con nosotros, mejora tu imagen publicitaria.",
   },
   {
     title: "Marketing digital",
     href: "/servicios/marketing",
-    description: "La mejor opción para publicidad y contenido en las redes sociales.",
+    description:
+      "La mejor opción para publicidad y contenido en las redes sociales.",
   },
   {
     title: "Capacitación empresarial",
@@ -44,29 +51,35 @@ const components: { title: string; href: string; description: string }[] = [
     title: "¿Buscas algo más?",
     href: "https://www.google.com.mx/maps/place/Agencia+Valore/@21.9072379,-102.2804263,17z/data=!3m1!4b1!4m6!3m5!1s0x8429ef73f5afeb9f:0x4aa07056238f3e51!8m2!3d21.9072329!4d-102.2778514!16s%2Fg%2F11tfh7nphr?entry=ttu",
     description: "Tengamos una cita, ¿te parece bien?.",
+    blank: true,
   },
-]
+];
 
 export function NavigationMenuDemo() {
   return (
     <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuTrigger
-            className="bg-cyan-600 text-white hover:bg-cyan-600 transition-all duration-300 text-lg mt-1 "
-          >
+          <NavigationMenuTrigger className="bg-cyan-600 text-white hover:bg-cyan-600 transition-all duration-300 text-base sm:text-sm lg:text-2xl w-auto px-5">
             Nuestros servicios
           </NavigationMenuTrigger>
           <NavigationMenuContent className="">
-            <ul className="bg-gray-200 grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+            <ul className="bg-gray-200 flex gap-3 px-3 w-max  flex-col">
               {components.map((component) => (
                 <div key={component.title}>
-                  <ListItem
-                    title={component.title}
-                    href={component.href}
-                  >
-                    {component.description}
-                  </ListItem>
+                  {component.blank ? (
+                      <ListItem
+                        target="blank"
+                        title={component.title}
+                        href={component.href}
+                      >
+                        {component.description}
+                      </ListItem>
+                  ) : (
+                    <ListItem title={component.title} href={component.href}>
+                      {component.description}
+                    </ListItem>
+                  )}
                 </div>
               ))}
             </ul>
@@ -74,7 +87,7 @@ export function NavigationMenuDemo() {
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
-  )
+  );
 }
 
 const ListItem = React.forwardRef<
@@ -87,19 +100,18 @@ const ListItem = React.forwardRef<
         <a
           ref={ref}
           className={cn(
-            "bg-white block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+            "bg-cyan-100 block    rounded-md w-auto  h-auto hover:bg-white transition-all duration-300",
             className
           )}
-          target="blank"
           {...props}
         >
-          <div className="text-sm font-medium leading-none">{title}</div>
-          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+          <div className="px-3 lg:text-base font-medium text-sm">{title}</div>
+          <p className="px-3 text-sm lg-text-xl sm:text-xs md:text-base">
             {children}
           </p>
         </a>
       </NavigationMenuLink>
     </li>
-  )
-})
-ListItem.displayName = "ListItem"
+  );
+});
+ListItem.displayName = "ListItem";
